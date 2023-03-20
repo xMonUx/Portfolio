@@ -16,105 +16,63 @@
 <body>
 
 
-<!-- <div class="loader">
-    <div class="counter">
-        <p>ładowanie</p>
-        <h1>0%</h1>
-        <hr>
+<section class="content">
+
+    <div class="content__header">
+        <h1 style="text-align: center; margin-top: 500px;">header</h1>
     </div>
-</div> -->
-
-<!-- Navbar -->
-<div class="navbar">
-    <ul class="navbar-list">
-        <li class="navbar-item"><a href="#about"><p class="hover-underline">O mnie</p></a></li>
-        <li class="navbar-item"><a href="#projects"><p class="hover-underline">Projekty</p></a></li>
-        <li class="navbar-item "><a href="#contact"><p class="hover-underline">Kontakt</p></a></li>
-        <li class="navbar-item hover-animate"><a href="#cv"><p class="hover-underline">Curriculum Vitae</p></a></li>
-
-    </ul>
-</div>
-
-<!-- Header -->
-<div class="header-card">
-    <div class="header-overlay-top"></div>
-    <div class="header-image"></div>
-    <div class="header-overlay"></div>
-    <div class="header-content">
-        <i class="header-icon fa-solid fa-code"></i>
-        <div class="header-name">
-            <span class="name">FRONT-END</span>
-            <a class="link" href="#">Adrian Jaros</a>
-        </div>
-    </div>
-</div>
-
-
-<!-- Socials sidebar -->
-<div class="socials hide-socials">
-    <div class="social-item ">
-        <a href="https://github.com/xMonUx" target="_blank"><i class="icon fa-brands fa-github glitch "></i></a>
-    </div>
-    <div class="social-item">
-        <a href="#" target="_blank"><i class="icon fab fa-linkedin-in"></i></a>
-        
-    </div>
-    <div class="social-item">
-        <a href="#" target="_blank"><i class="icon fa-brands fa-instagram"></i></a>
-    </div>
-    <div class="social-item">
-        <a href="#" target="_blank"><i class="icon fa-brands fa-codepen"></i></a>
-
-    </div>
-</div>
-
-<!-- Content -->
-
-<div class="content">
-
-    <div class="projects">
-        <div class="containers">
-            <div class="container">
-                <div class="container-overlay">
-                    <div class="title">
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="container-overlay">
-                    
-                </div>
-            </div>
-            <div class="container">
-                <div class="container-overlay">
-                    
-                </div>
-            </div>
-        </div>
-        <div class="arrows">
-            <button class="arrow left"><i></i><i></i></button>
-            <button class="arrow right"><i></i><i></i></button>
-        </div>
-    </div>
-
-
-
-</div>
-
-
-<!-- <div class="footer">
-    © Adrian Jaros 2022
-</div> -->
-
-    <!-- JQuery JS -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Główny JS -->
-    <script src="scripts/app.js"></script>
-
-
-
     
+    <!-- content__navbar--hide -->
+    <div class="content__navbar content__navbar--fixed ">
+        <div class="navbar__items">
+            <a href="#about" class="navbar__item">About</a>
+            <a href="#projects" class="navbar__item">Projects</a>
+            <a href="#skills" class="navbar__item">Skills</a>
+            <a href="#contact" class="navbar__item">Contact</a>
+        </div>
+
+
+    </div>
+
+    <div class="content__about" id="about" >
+        <div class="content__about--picture"></div>
+        <div class="about__content" style="text-align: center;">
+            Sekcja o mnie
+        </div>
+    </div>
+
+    <div class="content__projects" id="projects">
+        <div class="projects__items">
+            <div class="projects__item">
+                Sekcja z projektami
+            </div>
+            <div class="projects__item">
+    
+            </div>
+            <div class="projects__item">
+    
+            </div>
+            <div class="projects__item">
+    
+            </div>
+        </div>
+        <div class="projects__arrows">
+            <div class="arrows__arrow--left"></div>
+            <div class="arrows__arro--left"></div>
+        </div>
+    </div>
+    
+</section>
+
+
+
+
+
+<!-- JQuery JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Główny JS -->
+<script src="scripts/app.js"></script>
+
 </body>
 </html>
