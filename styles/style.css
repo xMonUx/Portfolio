@@ -124,35 +124,29 @@
   border: 1px solid red;
   margin-top: 170px;
   width: 100%;
+
+
 }
 
 .projects__items {
-  display: grid;
-  grid-gap: 1rem;
-  padding: 1rem;
-  margin: 0 auto;
-  align-items: center;
-  justify-content: center;
 
-  grid-template-columns: 350px 350px 350px 350px;
+
 }
 
 .projects__item {
+  margin: 250px;
+  height: 650px ;
   border: 1px solid red;
-
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  overflow: hidden;
-  padding: 1rem;
-  width: 350px;
-  height: 500px;
-  text-align: center;
 }
 
-.projects__arrows {
-  position: absolute;
-}
+
+
+
+
+
+
+
+
 
 
 
