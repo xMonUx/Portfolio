@@ -1,10 +1,10 @@
-  $(window).on('scroll', function() {
-    if ($(this).scrollTop() > 400) {
-      $('.content__navbar').removeClass('content__navbar--hide');
-    } else {
-      $('.content__navbar').addClass('content__navbar--hide');
-    }
-  });
+  // $(window).on('scroll', function() {
+  //   if ($(this).scrollTop() > 400) {
+  //     $('.content__navbar').removeClass('content__navbar--hide');
+  //   } else {
+  //     $('.content__navbar').addClass('content__navbar--hide');
+  //   }
+  // });
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -37,3 +37,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
   slide(0);
 });
+
+
+{/* <div class="projects__item">
+<div class="projects__item--title"></div>
+<div class="project__item--image"></div>
+
+<div class="projects__item--description">
+    Aplikacja dla streamerów.
+</div>
+<div class="projects__item--technologies">
+
+</div>
+</div> */}
