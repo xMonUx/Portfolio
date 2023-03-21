@@ -207,11 +207,11 @@
 .page__loader--button {
   position: absolute;
   z-index: 4;
-  width: 280px;
+  width: 480px;
   height: 60px;
   border-radius: 0.6rem;
   padding-top: 15px;
-  font-size: 40px;
+  font-size: 30px;
   text-align: center;
   align-items: center;
   justify-content: center;

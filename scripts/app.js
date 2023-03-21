@@ -17,9 +17,7 @@ button.addEventListener("click", () => {
   body.classList.add("loaded");
   pageLoader.classList.add("page__loader--animate");
   circleAnimate.classList.add("loader__circle--animate")
+  body.style.overflow = "auto";
 
-  setTimeout(() => {
-    body.style.overflow = "auto";
-  }, 5);
 
 });
