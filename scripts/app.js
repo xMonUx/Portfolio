@@ -4,11 +4,20 @@
 //=============================
 window.addEventListener('scroll', function() {
   const navbar = document.querySelector('.content__navbar');
+  const arrow = document.querySelector('.content__header-arrow');
   if (this.window.pageYOffset > 650) { //Ilość pikseli po których pojawi się navbar
     navbar.classList.remove('content__navbar--hide');
+    
   } else {
     navbar.classList.add('content__navbar--hide');
   }
+
+  if (this.window.pageYOffset > 350) {
+    arrow.classList.add('arrowHide');
+  } else {
+    arrow.classList.remove('arrowHide');
+  }
+
 });
 
 //=============================
