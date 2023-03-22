@@ -9,12 +9,17 @@
     <!-- AwesomeFonts -->
     <script src="https://kit.fontawesome.com/bd626f218f.js" crossorigin="anonymous"></script>
 
+    <!-- ParticlesJS -->
+
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+
+
     <link rel="stylesheet" href="styles/style.css">
     
 </head>
 <body>
 
-<div class="page__loader">
+<!-- <div class="page__loader">
     <div class="page__loader--button"><span>Let me introduce myself.</span></div>
     <div class="page__loader--background">
         <div class="loader__circle">
@@ -22,35 +27,59 @@
             <div class="loader__circle--inner"></div>
         </div>
     </div>
-</div>
+</div> -->
 
 
-<section class="page__content">
+<div class="page__content">
 
-    <div class="content__header">
-        <h1 style="text-align: center; margin-top: 500px;">header</h1>
-    </div>
-    
-    <!-- content__navbar--hide -->
-    <div class="content__navbar content__navbar--fixed content__navbar--hide">
-        <div class="navbar__items">
-            <a href="#about" class="navbar__item navbar__item--active">About</a>
-            <a href="#projects" class="navbar__item">Projects</a>
-            <a href="#skills" class="navbar__item">Skills</a>
-            <a href="#contact" class="navbar__item">Contact</a>
+    <nav class="content__navbar content__navbar--fixed content__navbar--hide">
+        <div class="content__navbar--collapse">
+            <span class="line line-1"></span>
+            <span class="line line-2"></span>
+            <span class="line line-3"></span>
+        </div>
+        <div class="content__navbar--collapsed">
+            <ul class="content__navbar--list">
+                <div class="navbar__list--item active">
+                    <li><a href="#about">About</a></li>
+                </div>
+                <div class="navbar__list--item">
+                    <li><a href="#projects">Projects</a></li>
+                </div>
+                <div class="navbar__list--item">
+                    <li><a href="#skills">Skills</a></li>
+                </div>
+                <div class="navbar__list--item">
+                    <li><a href="#contact">Contact</a></li>
+                </div>
+            </ul>
         </div>
 
+    </nav>
 
+    <div class="content__header">
+        <div class="content__header--content">
+            <div class="content__header--particles">
+                <div id="header__particles">
+                </div>
+                <h1>Front-End Web</h1>
+                <h1>Developer</h1>
+                <p>Adrian Jaros</p>
+            </div>
+        </div>
+        <button class="header__particles--btn"><a href="#about">Discover</a></button>
+        <div class="content__header-arrow"><i class="fa fa-angle-down"></i></div>
     </div>
+    
 
-    <div class="content__about" id="about" >
+    <section class="content__about" id="about" >
         <div class="content__about--picture"></div>
         <div class="about__content" style="text-align: center;">
             Sekcja o mnie
         </div>
-    </div>
+    </section>
 
-    <div class="content__projects" id="projects">
+    <section class="content__projects" id="projects">
         <div class="projects__items">
             <div class="projects__items--content">
                 <h1>DonBon</h1>
@@ -88,10 +117,9 @@
             <div class="projects__items--image"></div>
         </div>
 
-    </div>
     
-</section>
-
+    </section>
+</div>
 
 
     <!-- JQuery JS -->
