@@ -7,6 +7,7 @@
     --navbar-collapsed: rgba(15, 15, 15, 0.8);
     --secondary-color: #4e111c;
 
+    --standard-transition: all 1s ease;
 
     --font-color: #fff;
   
@@ -34,7 +35,6 @@
   
   html, body {
     width: 100%;
-    min-height: 100vw;
     margin: 0;
     padding: 0;
 
@@ -92,6 +92,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  transition: var(--standard-transition);
 }
 
 .content__header--content h1, h2 {
@@ -104,16 +105,19 @@
   z-index: 2; 
   margin: 0;
   font-weight: 10;
+  transition: var(--standard-transition);
 }
 
 .content__header--content p {
   font-size: 20px;
+  transition: var(--standard-transition);
 }
 
 .content__header--particles {
   position: relative; 
   width: 900px;
   margin-top: -230px;
+  transition: var(--standard-transition);
 }
 
 #header__particles {
@@ -124,12 +128,14 @@
   z-index: 1; 
   overflow: hidden;
   opacity: .6;
+  transition: var(--standard-transition);
 }
 
 .particles__btn {
   position: absolute;
   bottom: 200px;
   margin-left: -195px;
+  transition: var(--standard-transition);
 }
 
 .header__particles--btn {
@@ -483,11 +489,25 @@
 }
 
 @media screen and (max-width: 768px) {
-  .content__header {
-    margin: 0;
-    text-align: left;
-  }
  
+.content__header--particles {
+  width: 600px;
+  margin-left: 20px;
+  bottom: -80px;
+  transition: all 1s ease;
+}
+
+.content__header--content h1, h2, p {
+  scale: 0.8;
+  transition: all 1s ease;
+}
+
+.particles__btn {
+    scale: 0.9;
+    margin-right: -20px;
+    transition: all 1s ease;
+}
+
   .page__loader--background {
     scale: 0.8;
   }
