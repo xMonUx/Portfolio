@@ -47,7 +47,7 @@
   body {
     display: grid; /* or css grid for more intricate layouts */
     flex-direction: column;
-    /* overflow: hidden; */
+    overflow: hidden;
   }
 
   body::-webkit-scrollbar {
@@ -217,6 +217,17 @@
 
   background: var(--navbar-color);
   box-shadow: 1px 1px 18px #080808;
+  animation: slideDown 0.2s;
+}
+
+@keyframes slideDown  {
+  from {
+    transform: translateY(-100px);
+  } 
+  to {
+    transform: translateY(0px);
+  }
+  
 }
 
 .content__navbar--fixed {
@@ -228,6 +239,7 @@
 .content__navbar--hide {
   display: none;
 }
+
 
 .content__navbar--list {
   list-style-type: none;

@@ -1,11 +1,11 @@
 
 //=============================
-// Navbar show/hide > 650px
+// Navbar show/hide > 550px
 //=============================
 window.addEventListener('scroll', function() {
   const navbar = document.querySelector('.content__navbar');
   const arrow = document.querySelector('.content__header-arrow');
-  if (this.window.pageYOffset > 650) { //Ilość pikseli po których pojawi się navbar
+  if (this.window.pageYOffset > 550) { //Ilość pikseli po których pojawi się navbar
     navbar.classList.remove('content__navbar--hide');
     
   } else {
@@ -20,32 +20,40 @@ window.addEventListener('scroll', function() {
 
 });
 
+if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+} else {
+    window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+    }
+}
+
 //=============================
 // Page Loader
 //=============================
-// const button = document.querySelector('.page__loader--button');
-// const body = document.querySelector('body');
-// const pageLoader = document.querySelector('.page__loader');
-// const circleAnimate = document.querySelector('.page__loader--background');
+const button = document.querySelector('.page__loader--button');
+const body = document.querySelector('body');
+const pageLoader = document.querySelector('.page__loader');
+const circleAnimate = document.querySelector('.page__loader--background');
 
-// let clicked = false;
+let clicked = false;
 
-// button.addEventListener("click", () => {
-//   clicked = true;
-//   body.classList.add("loaded");
-//   pageLoader.classList.add("page__loader--animate");
-//   circleAnimate.classList.add("loader__circle--animate");
-//   body.style.overflow = "auto";
-// });
+button.addEventListener("click", () => {
+  clicked = true;
+  body.classList.add("loaded");
+  pageLoader.classList.add("page__loader--animate");
+  circleAnimate.classList.add("loader__circle--animate");
+  body.style.overflow = "auto";
+});
 
-// setTimeout(() => {
-//   if (!clicked) {
-//     body.classList.add("loaded");
-//     pageLoader.classList.add("page__loader--animate");
-//     circleAnimate.classList.add("loader__circle--animate");
-//     body.style.overflow = "auto";
-//   }
-// }, 2000);
+setTimeout(() => {
+  if (!clicked) {
+    body.classList.add("loaded");
+    pageLoader.classList.add("page__loader--animate");
+    circleAnimate.classList.add("loader__circle--animate");
+    body.style.overflow = "auto";
+  }
+}, 2000);
 
 //=============================
 // Navbar hamburger menu toggle
