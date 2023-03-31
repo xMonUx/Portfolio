@@ -1,11 +1,12 @@
 
 //=============================
-// Navbar show/hide > 550px
+// Navbar || socials show/hide > 550px
 //=============================
 window.addEventListener('scroll', function() {
   const navbar = document.querySelector('.content__navbar');
   const arrow = document.querySelector('.content__header-arrow');
-  if (this.window.pageYOffset > 550) { //Ilość pikseli po których pojawi się navbar
+  const socials = document.querySelector('.content__social-links')
+  if (this.window.pageYOffset > 10) { //Ilość pikseli po których pojawi się navbar
     navbar.classList.remove('content__navbar--hide');
     
   } else {
@@ -16,6 +17,13 @@ window.addEventListener('scroll', function() {
     arrow.classList.add('arrowHide');
   } else {
     arrow.classList.remove('arrowHide');
+  }
+
+  if (this.window.pageYOffset > 400) { 
+    socials.classList.remove('content__social-links--hide');
+    
+  } else {
+    socials.classList.add('content__social-links--hide');
   }
 
 });
@@ -34,37 +42,37 @@ if (history.scrollRestoration) {
 //=============================
 // Page Loader
 //=============================
-const button = document.querySelector('.page__loader--button');
-const body = document.querySelector('body');
-const pageLoader = document.querySelector('.page__loader');
-const circleAnimate = document.querySelector('.page__loader--background');
+// const button = document.querySelector('.page__loader--button');
+// const body = document.querySelector('body');
+// const pageLoader = document.querySelector('.page__loader');
+// const circleAnimate = document.querySelector('.page__loader--background');
 
-let clicked = false;
+// let clicked = false;
 
-button.addEventListener("click", () => {
-  clicked = true;
-  body.classList.add("loaded");
-  pageLoader.classList.add("page__loader--animate");
-  circleAnimate.classList.add("loader__circle--animate");
-  body.style.overflow = "auto";
+// button.addEventListener("click", () => {
+//   clicked = true;
+//   body.classList.add("loaded");
+//   pageLoader.classList.add("page__loader--animate");
+//   circleAnimate.classList.add("loader__circle--animate");
+//   body.style.overflow = "auto";
 
-  setTimeout(() => {
-  pageLoader.style.display = "none";
-    }, 1000);
-});
+//   setTimeout(() => {
+//   pageLoader.style.display = "none";
+//     }, 1000);
+// });
 
-setTimeout(() => {
-  if (!clicked) {
-    body.classList.add("loaded");
-    pageLoader.classList.add("page__loader--animate");
-    circleAnimate.classList.add("loader__circle--animate");
-    body.style.overflow = "auto";
+// setTimeout(() => {
+//   if (!clicked) {
+//     body.classList.add("loaded");
+//     pageLoader.classList.add("page__loader--animate");
+//     circleAnimate.classList.add("loader__circle--animate");
+//     body.style.overflow = "auto";
 
-    setTimeout(() => {
-        pageLoader.style.display = "none";
-    }, 1000);
-  }
-}, 2000);
+//     setTimeout(() => {
+//         pageLoader.style.display = "none";
+//     }, 1000);
+//   }
+// }, 2000);
 
 //=============================
 // Navbar hamburger menu toggle
@@ -198,38 +206,6 @@ document.addEventListener("DOMContentLoaded", function() {
   "retina_detect": true
   });
 
-const aboutSection = document.getElementById('about');
-const projectsSection = document.getElementById('projects');
-let currentSectionName = null;
 
-function getCurrentSection() {
-  const scrollPosition = window.pageYOffset;
-  const halfViewportHeight = window.innerHeight / 2;
-
-  if (scrollPosition >= aboutSection.offsetTop - halfViewportHeight && scrollPosition < projectsSection.offsetTop - halfViewportHeight) {
-    return 'about';
-  } else if (scrollPosition >= projectsSection.offsetTop - halfViewportHeight) {
-    return 'projects';
-  } else {
-    return null;
-  }
-}
-
-// Dodawanie i usuwanie klasy "active" w zależności od aktualnie wyświetlanej sekcji
-window.addEventListener('scroll', () => {
-  const newSectionName = getCurrentSection();
-
-  if (newSectionName !== currentSectionName) {
-    if (currentSectionName) {
-      document.getElementById(currentSectionName).classList.remove('active');
-    }
-
-    if (newSectionName) {
-      document.getElementById(newSectionName).classList.add('active');
-    }
-
-    currentSectionName = newSectionName;
-  }
-});
 
   
