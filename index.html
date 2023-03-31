@@ -11,6 +11,7 @@
 
     <!-- ParticlesJS -->
     <script src="scripts/particles.min.js"></script> 
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.js"></script>
 
 
     <link rel="stylesheet" href="styles/style.css">
@@ -18,7 +19,7 @@
 </head>
 <body>
 
-<!-- <div class="page__loader">
+<div class="page__loader">
     <div class="page__loader--button"><span>Let me introduce myself.</span></div>
     <div class="page__loader--background">
         <div class="loader__circle">
@@ -26,35 +27,33 @@
             <div class="loader__circle--inner"></div>
         </div>
     </div>
-</div> -->
+</div>
 
+<nav class="content__navbar content__navbar--fixed content__navbar--hide">
+    <div class="content__navbar--collapse">
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+    </div>
+    <div class="content__navbar--collapsed">
+        <ul class="content__navbar--list">
+            <div class="navbar__list--item active">
+                <li><a href="#about">About</a></li>
+            </div>
+            <div class="navbar__list--item">
+                <li><a href="#projects">Projects</a></li>
+            </div>
+            <div class="navbar__list--item">
+                <li><a href="#skills">Skills</a></li>
+            </div>
+            <div class="navbar__list--item">
+                <li><a href="#contact">Contact</a></li>
+            </div>
+        </ul>
+    </div>
+</nav>
 
 <div class="page__content">
-
-    <nav class="content__navbar content__navbar--fixed content__navbar--hide">
-        <div class="content__navbar--collapse">
-            <span class="line line-1"></span>
-            <span class="line line-2"></span>
-            <span class="line line-3"></span>
-        </div>
-        <div class="content__navbar--collapsed">
-            <ul class="content__navbar--list">
-                <div class="navbar__list--item active">
-                    <li><a href="#about">About</a></li>
-                </div>
-                <div class="navbar__list--item">
-                    <li><a href="#projects">Projects</a></li>
-                </div>
-                <div class="navbar__list--item">
-                    <li><a href="#skills">Skills</a></li>
-                </div>
-                <div class="navbar__list--item">
-                    <li><a href="#contact">Contact</a></li>
-                </div>
-            </ul>
-        </div>
-
-    </nav>
 
     <div class="content__header">
         <div class="content__header--content">
@@ -70,15 +69,49 @@
         <div class="content__header-arrow"><i class="fa fa-angle-down"></i></div>
     </div>
     
-
-    <!-- <section class="content__about" id="about" >
-        <div class="content__about--picture"></div>
-        <div class="about__content" style="text-align: center;">
-            Sekcja o mnie
+    <section class="content__about" id="about" >
+        <div class="content__about--wrapper">
+            <div class="content__about--title">
+                <p>Hi! I'm Adrian, a frontend developer currently looking for a full-time job.</p> 
+                 <p>Most of my projects in my portfolio are things that i did for fun. </p>
+                 <p class="about__title--add">Or my friends asked me to.</p> 
+             </div>
+             <span class="about__title--technologies">So far, I have worked with:</span> 
+             <div class="content__about--content">
+                 <div class="about__content--item-1">
+                     Main technologies
+                     <ul>
+                         <li>JS/jquery</li>
+                         <li>Bootstrap</li>
+                         <li>Responsive Web Design</li>
+                         <li>Node.js</li>
+                         <li>React</li>
+                     </ul>
+                 </div>
+                 <div class="about__content--item-2">
+                     Additional technologies
+                     <ul>
+                         <li>Three.js</li>
+                         <li>Particles.js</li>
+                         <li>Modernizr.js</li>
+       
+                     </ul>
+                 </div>
+                 <div class="about__content--item-3">
+                     Software
+                     <ul>
+                         <li>Figma</li>
+                         <li>Canva</li>
+                         <li>Adobe Photoshop</li>
+                         <li>Adobe Ilustrator</li>
+                     </ul>
+                 </div>
+             </div>
         </div>
+
     </section>
 
-    <section class="content__projects" id="projects">
+    <!-- <section class="content__projects" id="projects">
         <div class="projects__items">
             <div class="projects__items--content">
                 <h1>DonBon</h1>
@@ -116,6 +149,7 @@
             <div class="projects__items--image"></div>
         </div>
     </section> -->
+
 </div>
 
 

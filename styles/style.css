@@ -70,7 +70,9 @@
 /* Page content */
 
 .page__content {
-  
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 
 .content__header {
@@ -301,34 +303,41 @@
 }
 
 .content__about {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 219px;
-
-  margin-top: 170px;
-  border: 1px solid red;
   width: 100%;
-  padding: 1rem;
+  padding: 2rem 6rem;
 }
 
-.content__about--picture {
-  margin-left: 100px;
-  background-image: url('https://img.freepik.com/free-photo/smiling-middle-aged-bald-man-wearing-pink-t-shirt-with-glasses_141793-89749.jpg?w=1380&t=st=1679313024~exp=1679313624~hmac=6ed0c83114685302685e7028e62b3c023209bbd6c884a211b7c046e07c2682f1');
-  background-position: center;
-  border-radius: 0.6rem;
-
-  background-size: cover;
-  width: 500px;
-  height: 500px;
+.content__about--title {
+  font-size: 30px;
+  padding-bottom: 3rem;
 }
 
-.about__content {
-  border: 1px solid red;
-  width: 1000px;
-  height: 600px;
-  border-radius: 0.6rem;
+.content__about--title p {
+  margin: 0 auto;
 }
+
+.about__title--add {
+  margin: 0 auto;
+  font-size: 19px;
+}
+
+.about__title--technologies {
+  font-size: 24px;
+}
+
+.content__about--content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.about__content--item-1 { grid-area: 1 / 1 / 2 / 2; }
+.about__content--item-2 { grid-area: 1 / 2 / 2 / 3; }
+.about__content--item-3 { grid-area: 1 / 3 / 2 / 4; }
 
 .content__projects {
   border: 1px solid red;
@@ -488,25 +497,28 @@
   }
 }
 
+/* Tablet */
 @media screen and (max-width: 768px) {
  
-.content__header--particles {
-  width: 600px;
-  margin-left: 20px;
-  bottom: -80px;
-  transition: all 1s ease;
-}
+  .content__header--particles {
+    width: 600px;
+    margin-left: 20px;
+    bottom: -80px;
+    transition: all 1s ease;
+  }
 
-.content__header--content h1, h2, p {
-  scale: 0.8;
-  transition: all 1s ease;
-}
+  .content__header--content h1,
+  .content__header--content h2,
+  .content__header--content p {
+    scale: 0.8;
+    transition: all 1s ease;
+  }
 
-.particles__btn {
+  .particles__btn {
     scale: 0.9;
     margin-right: -20px;
     transition: all 1s ease;
-}
+  }
 
   .page__loader--background {
     scale: 0.8;
@@ -637,3 +649,7 @@
  }
 }
 
+/* Mobile */
+@media screen and (max-width: 480px) { 
+
+}
