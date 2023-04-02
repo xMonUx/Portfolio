@@ -2,13 +2,18 @@
 //=============================
 // Navbar || socials show/hide > 550px
 //=============================
+
+let timer;
+let isIdle = false;
+const idleTime = 2000; //czas bezczynności, po którym funkcja zostanie wykonana
+
 window.addEventListener('scroll', function() {
   const navbar = document.querySelector('.content__navbar');
   const arrow = document.querySelector('.content__header-arrow');
-  const socials = document.querySelector('.content__social-links')
-  if (this.window.pageYOffset > 10) { //Ilość pikseli po których pojawi się navbar
+  const socials = document.querySelector('.content__social-links');
+
+  if (this.window.pageYOffset > 350) {
     navbar.classList.remove('content__navbar--hide');
-    
   } else {
     navbar.classList.add('content__navbar--hide');
   }
@@ -19,18 +24,39 @@ window.addEventListener('scroll', function() {
     arrow.classList.remove('arrowHide');
   }
 
-  if (this.window.pageYOffset > 400) { 
+  if (this.window.pageYOffset > 400) {
     socials.classList.remove('content__social-links--hide');
-    
   } else {
     socials.classList.add('content__social-links--hide');
   }
 
+  clearTimeout(timer);
+  if (!isIdle) {
+    timer = setTimeout(function() {
+      navbar.classList.add('content__navbar--hide');
+      isIdle = true;
+    }, idleTime);
+  }
 });
 
-//=============================
+//restart timera gdy użytkownik jest aktywny
+window.addEventListener('mousemove', function() {
+  const navbar = document.querySelector('.content__navbar');
+
+  if (isIdle) {
+    navbar.classList.remove('content__navbar--hide');
+    isIdle = false;
+    clearTimeout(timer);
+    timer = setTimeout(function() {
+      navbar.classList.add('content__navbar--hide');
+      isIdle = true;
+    }, idleTime);
+  }
+});
+
+// =============================
 // Refresh page scroll on top
-//=============================
+// =============================
 if (history.scrollRestoration) {
     history.scrollRestoration = 'manual';
 } else {
@@ -206,6 +232,37 @@ document.addEventListener("DOMContentLoaded", function() {
   "retina_detect": true
   });
 
+//Waypoints
+var waypoint = new Waypoint({
+  element: document.getElementById('projects'),
+  handler: function() {
+    console.log('Waypoint')
+  }
+});
 
+var $parallaxElement = $('.content__header');
+var elementHeight = $parallaxElement.outerHeight();
 
+function parallax() {
+ 
+  var scrollPos = $(window).scrollTop();
+  var transformValue = scrollPos/40;
+  var opacityValue =  1 - ( scrollPos / 400);
+  var blurValue = Math.min(scrollPos / 100, 3);
   
+  if ( scrollPos < elementHeight ) {
+  
+    $parallaxElement.css({
+      'transform': 'translate3d(0, -' + transformValue + '%, 0)',
+      'opacity': opacityValue,
+      '-webkit-filter' : 'blur('+blurValue+'px)',
+    });
+    
+  }
+  
+}
+
+
+$(window).scroll(function() {
+  parallax();
+});

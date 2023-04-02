@@ -11,9 +11,11 @@
 
     <!-- ParticlesJS -->
     <script src="scripts/particles.min.js"></script> 
-    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.js"></script>
-
-
+    <script src="scripts/vendor/skrollr.js"></script>
+    <script src="scripts/vendor/noframework.waypoints.js"></script>
+    <script src="scripts/vendor/noframework.waypoints.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    
     <link rel="stylesheet" href="styles/style.css">
     
 </head>
@@ -41,7 +43,7 @@
                 <li><a href="#about">About</a></li>
             </div>
             <div class="navbar__list--item">
-                <li><a href="#projects">Projects</a></li>
+                <li class="list__item--projects"><a href="#projects">Projects</a></li>
             </div>
             <div class="navbar__list--item">
                 <li><a href="#skills">Skills</a></li>
@@ -70,9 +72,8 @@
     </div>
 </div>
 
-<div class="page__content">
-
-    <div class="content__header">
+<div class="content__header--wrapper">
+    <div class="content__header bg-image">
         <div class="content__header--content">
             <h1>Front-End Web</h1>
             <h1>Developer</h1>
@@ -85,18 +86,20 @@
         <a href="#about" class="particles__btn"><button class="header__particles--btn">Discover</button></a>
         <div class="content__header-arrow"><i class="fa fa-angle-down"></i></div>
     </div>
-    
-    <section class="content__about" id="about" >
+</div>
+
+<div class="page__content">
+
+    <section class="content__about" id="about">
         <div class="content__about--wrapper">
             <div class="content__about--title">
                 <p>Hi! I'm Adrian, a frontend developer currently looking for a full-time job.</p> 
-                 <p>Most of my projects in my portfolio are things that i did for fun. </p>
-                 <p class="about__title--add">Or my friends asked me to.</p> 
+                <p>Most of my projects in my portfolio are things that i did for fun. </p>
+                <p class="about__title--add">Or my friends asked me to.</p> 
              </div>
              <span class="about__title--technologies">So far, I have worked with:</span> 
              <div class="content__about--content">
                  <div class="about__content--item-1">
-                     Main technologies
                      <ul>
                          <li>JS/jquery</li>
                          <li>Bootstrap</li>
@@ -106,7 +109,6 @@
                      </ul>
                  </div>
                  <div class="about__content--item-2">
-                     Additional technologies
                      <ul>
                          <li>Three.js</li>
                          <li>Particles.js</li>
@@ -115,7 +117,6 @@
                      </ul>
                  </div>
                  <div class="about__content--item-3">
-                     Software
                      <ul>
                          <li>Figma</li>
                          <li>Canva</li>
@@ -125,12 +126,99 @@
                  </div>
              </div>
         </div>
+    </section> 
+
+    <section class="content__projects" id="projects">
+        <div class="content__projects--title">
+            My recent work
+        </div>
+        <div class="content__projects--wrapper">
+
+            <div class="content__projects--container content__projects--item-1">
+                <div class="projects__item--image">
+                    <ul class="item__image--tech">
+                        <li><button class="item__image--button">HTML</button></li>
+                        <li><button class="item__image--button">JS</button></li>
+                        <li><button class="item__image--button">CSS</button></li>
+                        <li><button class="item__image--button">Python</button></li>
+                        <li><button class="item__image--button">PHP</button></li>
+
+                      </ul>
+                    <div class="projects__card--wrapper">
+                        <div class="card__wrapper--inner">
+                            <div class="projects__card--content">
+                            <h1 class="projects__card--title"><a href="https://github.com/Axilee/DonBon">DonBon</a></h1>
+                            <p class="projects__card--info">An app created for streamers that allows viewers to trigger action on the creator's computer.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects__item--content">
+                    <p>The web application allows real-time activation and deactivation of specific commands from the web application, where sections can be activated:</p> 
+                    <ul>
+                        <li> commands for points</li>
+                        <li> commands for bits</li>
+                        <li> commands sent in chat</li>
+                    </ul>
+                    <p>Streamer has the ability to automatically download tokens from twitch or spotify apps, which allows for a quick and virtually non-invasive ability to implement the bot.</p>
+                    <p>In addition, a bot has been written that allows users of the stream to trigger previously enabled commands using the aforementioned methods.</p>
+                </div>
+            </div>
+            <div class="content__projects--container content__projects--item-2">
+                <div class="projects__item--image">
+                    <ul class="item__image--tech">
+                        <li><button class="item__image--button">Python</button></li>
+                        <li><button class="item__image--button">PHP</button></li>
+
+                      </ul>
+                    <div class="projects__card--wrapper">
+                        <div class="card__wrapper--inner">
+                            <div class="projects__card--content">
+                            <h1 class="projects__card--title"><a href="https://github.com/Axilee/DonBon">DonBon</a></h1>
+                            <p class="projects__card--info">An app created for streamers that allows viewers to trigger action on the creator's computer.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects__item--content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, a. Expedita fugit repellat similique quia, officia, odit porro iste mollitia rem ipsam doloremque quibusdam deleniti?
+                </div>
+            </div>
+            <div class="content__projects--container content__projects--item-3">
+                <div class="projects__item--image">
+                    <ul class="item__image--tech">
+                        <li><button class="item__image--button">HTML</button></li>
+                        <li><button class="item__image--button">JS</button></li>
+                        <li><button class="item__image--button">CSS</button></li>
+
+                      </ul>
+                    <div class="projects__card--wrapper">
+                        <div class="card__wrapper--inner">
+                            <div class="projects__card--content">
+                            <h1 class="projects__card--title"><a href="https://github.com/Axilee/DonBon">DonBon</a></h1>
+                            <p class="projects__card--info">An app created for streamers that allows viewers to trigger action on the creator's computer.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects__item--content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Odit et blanditiis nostrum autem nulla, doloremque, 
+                    rerum adipisci minima dolores voluptatem natus officiis quaerat repellendus? 
+                    Vitae facilis nesciunt hic veniam quos unde, officiis provident odio adipisci.
+                </div>
+            </div>
+        </div>
 
     </section>
 
-
-
 </div>
+
+<div class="cursor cursor--large"></div>
+<div class="cursor cursor--small"></div>
+   
+
+
 
 
     <!-- JQuery JS -->
