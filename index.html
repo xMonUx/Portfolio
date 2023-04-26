@@ -4,18 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Adrian Jaros - Frontend Web Developer</title>
+    <meta name="keywords" 
+    content="
+    web designer, 
+    web design, 
+    responsive web design, 
+    strony internetowe, 
+    responsywne strony, 
+    grafika komputerowa, 
+    kreacja graficzna, 
+    branding, 
+    Warszawa, 
+    ui design, 
+    ux design, 
+    projektowanie logo, 
+    e-commerce, 
+    brand design, 
+    web development, 
+    e-commerce, 
+    strony mobilne
+    ">
 
     <!-- AwesomeFonts -->
     <script src="https://kit.fontawesome.com/bd626f218f.js" crossorigin="anonymous"></script>
 
     <!-- ParticlesJS -->
     <script src="scripts/particles.min.js"></script> 
-    <script src="scripts/vendor/skrollr.js"></script>
+
+    <!-- Waypoints -->
     <script src="scripts/vendor/noframework.waypoints.js"></script>
     <script src="scripts/vendor/noframework.waypoints.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
-    
+
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+    <!-- Mixitup -->
+    <script src="scripts/vendor/mixitup.min.js"></script>
+
     <link rel="stylesheet" href="styles/style.css">
     
 </head>
@@ -56,39 +82,34 @@
 </nav>
 
 <div class="content__social-links content__social-links--hide">
-    <div class="content__social-links--item">
-        <a href="https://github.com/xMonUx" target="_blank"><i class="icon fa-brands fa-github glitch "></i></a>
-    </div>
-    <div class="content__social-links--item">
-        <a href="https://www.linkedin.com/in/adrian-jaros-8ba678172/" target="_blank"><i class="icon fab fa-linkedin-in"></i></a>
-        
-    </div>
-    <div class="content__social-links--item">
-        <a href="#" target="_blank"><i class="icon fa-brands fa-instagram"></i></a>
-    </div>
-    <div class="content__social-links--item">
-        <a href="#" target="_blank"><i class="icon fa-brands fa-codepen"></i></a>
-
-    </div>
+    <ul>
+      <li><a href="https://github.com/xMonUx" target="_blank"><i class="fab fa-github"></i></a></li>
+      <li><a href="https://codepen.io/MonUx" target="_blank"><i class="fab fa-codepen"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/adrian-jaros-8ba678172/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+      <li><a href="#" target="_blank"><i class="fab fa-whatsapp" ></i></a></li>
+    </ul>
 </div>
+    
 
-<div class="content__header--wrapper">
-    <div class="content__header bg-image">
-        <div class="content__header--content">
-            <h1>Front-End Web</h1>
-            <h1>Developer</h1>
-            <p>Adrian Jaros</p>
-            <div class="content__header--particles">
-                <div id="header__particles">
+<main class="page__content">
+
+    <section class="content__hero">
+        <div class="content__hero--wrapper">
+            <div class="content__hero bg-image">
+                <div class="content__hero--content">
+                    <h1>Front-End Web</h1>
+                    <h1>Developer</h1>
+                    <p>Adrian Jaros</p>
+                    <div class="content__hero--particles">
+                        <div id="hero__particles">
+                        </div>
+                    </div>
                 </div>
+                <a href="#about" class="particles__btn--wrapper"><button class="hero__particles--btn">Discover</button></a>
+                <div class="content__hero-arrow"><i class="fa fa-angle-down"></i></div>
             </div>
         </div>
-        <a href="#about" class="particles__btn"><button class="header__particles--btn">Discover</button></a>
-        <div class="content__header-arrow"><i class="fa fa-angle-down"></i></div>
-    </div>
-</div>
-
-<div class="page__content">
+    </section>
 
     <section class="content__about" id="about">
         <div class="content__about--wrapper">
@@ -96,138 +117,134 @@
                 <p>Hi! I'm Adrian, a frontend developer currently looking for a full-time job.</p> 
                 <p>Most of my projects in my portfolio are things that i did for fun. </p>
                 <p class="about__title--add">Or my friends asked me to.</p> 
-             </div>
-             <span class="about__title--technologies">So far, I have worked with:</span> 
-             <div class="content__about--content">
-                 <div class="about__content--item-1">
-                     <ul>
-                         <li>JS/jquery</li>
-                         <li>Bootstrap</li>
-                         <li>Responsive Web Design</li>
-                         <li>Node.js</li>
-                         <li>React</li>
-                     </ul>
-                 </div>
-                 <div class="about__content--item-2">
-                     <ul>
-                         <li>Three.js</li>
-                         <li>Particles.js</li>
-                         <li>Modernizr.js</li>
-       
-                     </ul>
-                 </div>
-                 <div class="about__content--item-3">
-                     <ul>
-                         <li>Figma</li>
-                         <li>Canva</li>
-                         <li>Adobe Photoshop</li>
-                         <li>Adobe Ilustrator</li>
-                     </ul>
-                 </div>
-             </div>
+            </div>
+            <span class="about__title--technologies">So far, I have worked with:</span> 
+            <div class="content__about--content grid">
+                <div class="about__content--item-1">
+                    <ul>
+                        <li>JS/jquery</li>
+                        <li>Bootstrap</li>
+                        <li>Responsive Web Design</li>
+                        <li>Node</li>
+                        <li>React</li>
+                    </ul>
+                </div>
+                <div class="about__content--item-2">
+                    <ul>
+                        <li>Three.js</li>
+                        <li>Particles.js</li>
+                        <li>Modernizr.js</li>
+
+                    </ul>
+                </div>
+                <div class="about__content--item-3">
+                    <ul>
+                        <li>Figma</li>
+                        <li>Canva</li>
+                        <li>Adobe Photoshop</li>
+                        <li>Adobe Ilustrator</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </section> 
+    </section>
 
     <section class="content__projects" id="projects">
-        <div class="content__projects--title">
-            My recent work
-        </div>
+
+
         <div class="content__projects--wrapper">
-
-            <div class="content__projects--container content__projects--item-1">
-                <div class="projects__item--image">
-                    <ul class="item__image--tech">
-                        <li><button class="item__image--button">HTML</button></li>
-                        <li><button class="item__image--button">JS</button></li>
-                        <li><button class="item__image--button">CSS</button></li>
-                        <li><button class="item__image--button">Python</button></li>
-                        <li><button class="item__image--button">PHP</button></li>
-
-                      </ul>
-                    <div class="projects__card--wrapper">
-                        <div class="card__wrapper--inner">
-                            <div class="projects__card--content">
-                            <h1 class="projects__card--title"><a href="https://github.com/Axilee/DonBon">DonBon</a></h1>
-                            <p class="projects__card--info">An app created for streamers that allows viewers to trigger action on the creator's computer.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="projects__item--content">
-                    <p>The web application allows real-time activation and deactivation of specific commands from the web application, where sections can be activated:</p> 
-                    <ul>
-                        <li> commands for points</li>
-                        <li> commands for bits</li>
-                        <li> commands sent in chat</li>
-                    </ul>
-                    <p>Streamer has the ability to automatically download tokens from twitch or spotify apps, which allows for a quick and virtually non-invasive ability to implement the bot.</p>
-                    <p>In addition, a bot has been written that allows users of the stream to trigger previously enabled commands using the aforementioned methods.</p>
-                </div>
+            <div class="content__projects--filters">
+                <div class="projects__content--title">Latest projects</div>
+                <ul class="content__projects--filters-list">
+                    <li class="projects__filters--item active-filter" data-filter="all">ALL</li>
+                    <li class="projects__filters--item" data-filter=".webdev">WEB DEVELOPMENT </li>
+                    <li class="projects__filters--item" data-filter=".webdesign">WEB DESIGN</li>
+                    <li class="projects__filters--item" data-filter=".apps">APPS</li>
+                    <li class="projects__filters--item" data-filter=".react">REACT</li>
+                    <li class="projects__filters--item" data-filter=".node">NODE</li>
+                </ul>
             </div>
-            <div class="content__projects--container content__projects--item-2">
-                <div class="projects__item--image">
-                    <ul class="item__image--tech">
-                        <li><button class="item__image--button">Python</button></li>
-                        <li><button class="item__image--button">PHP</button></li>
-
-                      </ul>
-                    <div class="projects__card--wrapper">
-                        <div class="card__wrapper--inner">
-                            <div class="projects__card--content">
-                            <h1 class="projects__card--title"><a href="https://github.com/Axilee/DonBon">DonBon</a></h1>
-                            <p class="projects__card--info">An app created for streamers that allows viewers to trigger action on the creator's computer.</p>
-                            </div>
-                        </div>
+            <ul class="content__projects--cards" data-ref="content__projects--cards">
+                <li class="projects__card--item webdev apps react node webdesign">
+                  <div class="card__item--wrapper">
+                    <div class="card__item--image"><img src="https://picsum.photos/500/300/?image=10"></div>
+                    <div class="card__item--content">
+                      <h2 class="card__item--title">Card Grid Layout</h2>
+                      <p class="card__item--desc">lorem ipsum doloro sit</p>
                     </div>
-                </div>
-                <div class="projects__item--content">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, a. Expedita fugit repellat similique quia, officia, odit porro iste mollitia rem ipsam doloremque quibusdam deleniti?
-                </div>
-            </div>
-            <div class="content__projects--container content__projects--item-3">
-                <div class="projects__item--image">
-                    <ul class="item__image--tech">
-                        <li><button class="item__image--button">HTML</button></li>
-                        <li><button class="item__image--button">JS</button></li>
-                        <li><button class="item__image--button">CSS</button></li>
+                  </div>
+                </li>
+                <li class="projects__card--item webdev react node">
+                  <div class="card__item--wrapper">
+                    <div class="card__item--image"><img src="https://picsum.photos/500/300/?image=5"></div>
+                    <div class="card__item--content">
+                      <h2 class="card__item--title">Card Grid Layout</h2>
+                      <p class="card__item--desc">lorem ipsum doloro sit</p>
 
-                      </ul>
-                    <div class="projects__card--wrapper">
-                        <div class="card__wrapper--inner">
-                            <div class="projects__card--content">
-                            <h1 class="projects__card--title"><a href="https://github.com/Axilee/DonBon">DonBon</a></h1>
-                            <p class="projects__card--info">An app created for streamers that allows viewers to trigger action on the creator's computer.</p>
-                            </div>
-                        </div>
                     </div>
-                </div>
-                <div class="projects__item--content">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Odit et blanditiis nostrum autem nulla, doloremque, 
-                    rerum adipisci minima dolores voluptatem natus officiis quaerat repellendus? 
-                    Vitae facilis nesciunt hic veniam quos unde, officiis provident odio adipisci.
-                </div>
-            </div>
+                  </div>
+                </li>
+                <li class="projects__card--item react node webdesign">
+                  <div class="card__item--wrapper">
+                    <div class="card__item--image"><img src="https://picsum.photos/500/300/?image=11"></div>
+                    <div class="card__item--content">
+                      <h2 class="card__item--title">Card Grid Layout</h2>
+                      <p class="card__item--desc">lorem ipsum doloro sit</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="projects__card--item node">
+                  <div class="card__item--wrapper">
+                    <div class="card__item--image"><img src="https://picsum.photos/500/300/?image=14"></div>
+                    <div class="card__item--content">
+                      <h2 class="card__item--title">Card Grid Layout</h2>
+                      <p class="card__item--desc">lorem ipsum doloro sit</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="projects__card--item react node">
+                  <div class="card__item--wrapper">
+                    <div class="card__item--image"><img src="https://picsum.photos/500/300/?image=17"></div>
+                    <div class="card__item--content">
+                      <h2 class="card__item--title">Card Grid Layout</h2>
+                      <p class="card__item--desc">lorem ipsum doloro sit</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="projects__card--item apps webdesign">
+                  <div class="card__item--wrapper">
+                    <div class="card__item--image"><img src="https://picsum.photos/500/300/?image=2"></div>
+                    <div class="card__item--content">
+                      <h2 class="card__item--title">Card Grid Layout</h2>
+                      <p class="card__item--desc">lorem ipsum doloro sit</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+
         </div>
+
+
+
+
 
     </section>
 
-</div>
-
-<div class="cursor cursor--large"></div>
-<div class="cursor cursor--small"></div>
-   
+    <section class="content__skills" id="skills">
+        
+    </section>
 
 
 
 
-    <!-- JQuery JS -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
-    <!-- Główny JS -->
+</main>
+
+
+
+
+
+    <!-- MAIN JS -->
     <script src="scripts/app.js"></script>
-
-
 
 
 </body>

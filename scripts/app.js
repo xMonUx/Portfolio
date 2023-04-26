@@ -9,7 +9,7 @@ const idleTime = 2000; //czas bezczynności, po którym funkcja zostanie wykonan
 
 window.addEventListener('scroll', function() {
   const navbar = document.querySelector('.content__navbar');
-  const arrow = document.querySelector('.content__header-arrow');
+  const arrow = document.querySelector('.content__hero-arrow');
   const socials = document.querySelector('.content__social-links');
 
   if (this.window.pageYOffset > 350) {
@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function() {
 //=============================
 // Particles
 //=============================
-  particlesJS("header__particles", {
+  particlesJS("hero__particles", {
     "particles": {
       "number": {
           "value": 110,
@@ -232,37 +232,48 @@ document.addEventListener("DOMContentLoaded", function() {
   "retina_detect": true
   });
 
-//Waypoints
-var waypoint = new Waypoint({
-  element: document.getElementById('projects'),
-  handler: function() {
-    console.log('Waypoint')
+// SCROLLREVEAL
+window.sr = ScrollReveal({ reset: true });
+
+sr.reveal('.content__about', { 
+  viewFactor: 0.5,
+  duration: 1000
+});
+
+sr.reveal('.content__projects', { 
+  viewFactor: 0.5,
+  duration: 1000
+});
+
+sr.reveal('.content__skills', { 
+  viewFactor: 0.5,
+  duration: 1000
+});
+
+// MixItUp
+var projectList = document.querySelector('.content__projects--cards');
+
+var mixer = mixitup(projectList, {
+  selectors: {
+    target: '.projects__card--item'
+  },
+  animation: {
+    easing: 'cubic-bezier(0.86, 0, 0.07, 1)',
+    duration: 600
   }
 });
 
-var $parallaxElement = $('.content__header');
-var elementHeight = $parallaxElement.outerHeight();
 
-function parallax() {
- 
-  var scrollPos = $(window).scrollTop();
-  var transformValue = scrollPos/40;
-  var opacityValue =  1 - ( scrollPos / 400);
-  var blurValue = Math.min(scrollPos / 100, 3);
-  
-  if ( scrollPos < elementHeight ) {
-  
-    $parallaxElement.css({
-      'transform': 'translate3d(0, -' + transformValue + '%, 0)',
-      'opacity': opacityValue,
-      '-webkit-filter' : 'blur('+blurValue+'px)',
-    });
+var filterButtons = document.querySelectorAll('.projects__filters--item');
+filterButtons.forEach(function(button) {
+  button.addEventListener('click', function() {
+
+    var filterValue = this.getAttribute('data-filter');
+    mixer.filter(filterValue);
     
-  }
-  
-}
-
-
-$(window).scroll(function() {
-  parallax();
+    filterButtons.forEach(function(button) {
+      button.classList.remove('active-filter');
+    });
+    this.classList.add('active-filter');
+  });
 });
