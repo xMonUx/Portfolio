@@ -68,37 +68,37 @@ if (history.scrollRestoration) {
 //=============================
 // Page Loader
 //=============================
-const button = document.querySelector('.page__loader--button');
-const body = document.querySelector('body');
-const pageLoader = document.querySelector('.page__loader');
-const circleAnimate = document.querySelector('.page__loader--background');
+// const button = document.querySelector('.page__loader--button');
+// const body = document.querySelector('body');
+// const pageLoader = document.querySelector('.page__loader');
+// const circleAnimate = document.querySelector('.page__loader--background');
 
-let clicked = false;
+// let clicked = false;
 
-button.addEventListener("click", () => {
-  clicked = true;
-  body.classList.add("loaded");
-  pageLoader.classList.add("page__loader--animate");
-  circleAnimate.classList.add("loader__circle--animate");
-  body.style.overflow = "auto";
+// button.addEventListener("click", () => {
+//   clicked = true;
+//   body.classList.add("loaded");
+//   pageLoader.classList.add("page__loader--animate");
+//   circleAnimate.classList.add("loader__circle--animate");
+//   body.style.overflow = "auto";
 
-  setTimeout(() => {
-  pageLoader.style.display = "none";
-    }, 1000);
-});
+//   setTimeout(() => {
+//   pageLoader.style.display = "none";
+//     }, 1000);
+// });
 
-setTimeout(() => {
-  if (!clicked) {
-    body.classList.add("loaded");
-    pageLoader.classList.add("page__loader--animate");
-    circleAnimate.classList.add("loader__circle--animate");
-    body.style.overflow = "auto";
+// setTimeout(() => {
+//   if (!clicked) {
+//     body.classList.add("loaded");
+//     pageLoader.classList.add("page__loader--animate");
+//     circleAnimate.classList.add("loader__circle--animate");
+//     body.style.overflow = "auto";
 
-    setTimeout(() => {
-        pageLoader.style.display = "none";
-    }, 1000);
-  }
-}, 2000);
+//     setTimeout(() => {
+//         pageLoader.style.display = "none";
+//     }, 1000);
+//   }
+// }, 2000);
 
 //=============================
 // Navbar hamburger menu toggle
@@ -232,7 +232,9 @@ document.addEventListener("DOMContentLoaded", function() {
   "retina_detect": true
   });
 
-// SCROLLREVEAL
+//=============================
+// ScrollReveal
+//=============================
 window.sr = ScrollReveal({ reset: true });
 
 sr.reveal('.content__about', { 
@@ -250,7 +252,9 @@ sr.reveal('.content__skills', {
   duration: 1000
 });
 
+//=============================
 // MixItUp
+//=============================
 var projectList = document.querySelector('.content__projects--cards');
 
 var mixer = mixitup(projectList, {
@@ -263,17 +267,230 @@ var mixer = mixitup(projectList, {
   }
 });
 
+//=============================
+// ProgressBar.js
+//=============================
+var bar1 = new ProgressBar.Circle(skill12, {
+  color: '#f6f3ed',
 
-var filterButtons = document.querySelectorAll('.projects__filters--item');
-filterButtons.forEach(function(button) {
-  button.addEventListener('click', function() {
+  strokeWidth: 4,
+  trailWidth: 1,
+  easing: 'easeInOut',
+  duration: 1400,
+  text: {
+    autoStyleContainer: false
+  },
+  from: { color: '#4d4c4b', width: 1 },
+  to: { color: '#4d4c4b', width: 2 },
 
-    var filterValue = this.getAttribute('data-filter');
-    mixer.filter(filterValue);
-    
-    filterButtons.forEach(function(button) {
-      button.classList.remove('active-filter');
-    });
-    this.classList.add('active-filter');
-  });
+  step: function(state, circle) {
+    circle.path.setAttribute('stroke', state.color);
+    circle.path.setAttribute('stroke-width', state.width);
+
+    var value = Math.round(circle.value() * 100);
+    if (value === 0) {
+      circle.setText('');
+    } else {
+      circle.setText(value + '%');
+    }
+
+  }
 });
+var bar2 = new ProgressBar.Circle(skill13, {
+  color: '#f6f3ed',
+
+  strokeWidth: 4,
+  trailWidth: 1,
+  easing: 'easeInOut',
+  duration: 1400,
+  text: {
+    autoStyleContainer: false
+  },
+  from: { color: '#4d4c4b', width: 1 },
+  to: { color: '#4d4c4b', width: 2 },
+
+  step: function(state, circle) {
+    circle.path.setAttribute('stroke', state.color);
+    circle.path.setAttribute('stroke-width', state.width);
+
+    var value = Math.round(circle.value() * 100);
+    if (value === 0) {
+      circle.setText('');
+    } else {
+      circle.setText(value + '%');
+    }
+
+  }
+});
+var bar3 = new ProgressBar.Circle(skill14, {
+  color: '#f6f3ed',
+
+  strokeWidth: 4,
+  trailWidth: 1,
+  easing: 'easeInOut',
+  duration: 1400,
+  text: {
+    autoStyleContainer: false
+  },
+  from: { color: '#4d4c4b', width: 1 },
+  to: { color: '#4d4c4b', width: 2 },
+
+  step: function(state, circle) {
+    circle.path.setAttribute('stroke', state.color);
+    circle.path.setAttribute('stroke-width', state.width);
+
+    var value = Math.round(circle.value() * 100);
+    if (value === 0) {
+      circle.setText('');
+    } else {
+      circle.setText(value + '%');
+    }
+
+  }
+});
+var bar4 = new ProgressBar.Circle(skill15, {
+  color: '#f6f3ed',
+
+  strokeWidth: 4,
+  trailWidth: 1,
+  easing: 'easeInOut',
+  duration: 1400,
+  text: {
+    autoStyleContainer: false
+  },
+  from: { color: '#4d4c4b', width: 1 },
+  to: { color: '#4d4c4b', width: 2 },
+
+  step: function(state, circle) {
+    circle.path.setAttribute('stroke', state.color);
+    circle.path.setAttribute('stroke-width', state.width);
+
+    var value = Math.round(circle.value() * 100);
+    if (value === 0) {
+      circle.setText('');
+    } else {
+      circle.setText(value + '%');
+    }
+
+  }
+});
+var bar5 = new ProgressBar.Circle(skill16, {
+  color: '#f6f3ed',
+
+  strokeWidth: 4,
+  trailWidth: 1,
+  easing: 'easeInOut',
+  duration: 1400,
+  text: {
+    autoStyleContainer: false
+  },
+  from: { color: '#4d4c4b', width: 1 },
+  to: { color: '#4d4c4b', width: 2 },
+
+  step: function(state, circle) {
+    circle.path.setAttribute('stroke', state.color);
+    circle.path.setAttribute('stroke-width', state.width);
+
+    var value = Math.round(circle.value() * 100);
+    if (value === 0) {
+      circle.setText('');
+    } else {
+      circle.setText(value + '%');
+    }
+
+  }
+});
+var bar6 = new ProgressBar.Circle(skill17, {
+  color: '#f6f3ed',
+
+  strokeWidth: 4,
+  trailWidth: 1,
+  easing: 'easeInOut',
+  duration: 1400,
+  text: {
+    autoStyleContainer: false
+  },
+  from: { color: '#4d4c4b', width: 1 },
+  to: { color: '#4d4c4b', width: 2 },
+
+  step: function(state, circle) {
+    circle.path.setAttribute('stroke', state.color);
+    circle.path.setAttribute('stroke-width', state.width);
+
+    var value = Math.round(circle.value() * 100);
+    if (value === 0) {
+      circle.setText('');
+    } else {
+      circle.setText(value + '%');
+    }
+
+  }
+});
+
+//=============================
+// Zdog
+//=============================
+
+let isSpinning = true;
+
+let illo = new Zdog.Illustration({
+  element: '.zdog-canvas',
+  dragRotate: true,
+  onDragStart: function() {
+    isSpinning = false;
+  },
+});
+
+let anchor = new Zdog.Anchor({
+  addTo: illo,
+  // uniform scale, will be okay
+  scale: 2,
+});
+
+new Zdog.Shape({
+  addTo: illo,
+  path: [ // triangle
+    { x:   -40, y: 40 },
+    { x:  0, y:  -40 },
+    { x: 40, y:  40 },
+    
+  ],
+  closed: false,
+  stroke: 10,
+  color: '#636'
+});
+
+new Zdog.Shape({
+  addTo: illo,
+  path: [ // triangle
+    { x:   55, y: 35 },
+    { x:  100, y:  -40 },
+    { x: 15, y:  -40 },
+    
+  ],
+  closed: false,
+  stroke: 10,
+  color: '#fff'
+});
+
+function animate() {
+  illo.rotate.y += isSpinning ? 0.02 : 0;
+  illo.updateRenderGraph();
+  requestAnimationFrame( animate );
+}
+
+animate();
+
+
+var waypoint = new Waypoint({
+  element: document.getElementById('skills'),
+  handler: function(direction) {
+    bar1.animate(0.94)
+    bar2.animate(0.87)
+    bar3.animate(0.64)
+    bar4.animate(0.69)
+    bar5.animate(0.57)
+    bar6.animate(0.82)
+  }
+})
+

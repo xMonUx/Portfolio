@@ -42,12 +42,16 @@
     <!-- Mixitup -->
     <script src="scripts/vendor/mixitup.min.js"></script>
 
+    <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/1.0.0/dist/progressbar.js"></script>
+    <script src="https://unpkg.com/zdog@1/dist/zdog.dist.min.js"></script>
+
+
+
     <link rel="stylesheet" href="styles/style.css">
     
 </head>
 <body>
-
-<div class="page__loader">
+<!-- <div class="page__loader">
     <div class="page__loader--button"><span>Let me introduce myself.</span></div>
     <div class="page__loader--background">
         <div class="loader__circle">
@@ -55,9 +59,8 @@
             <div class="loader__circle--inner"></div>
         </div>
     </div>
-</div>
-
-<nav class="content__navbar content__navbar--fixed content__navbar--hide">
+</div> -->
+<nav class="content__navbar content__navbar--fixed">
     <div class="content__navbar--collapse">
         <span class="line line-1"></span>
         <span class="line line-2"></span>
@@ -80,7 +83,6 @@
         </ul>
     </div>
 </nav>
-
 <div class="content__social-links content__social-links--hide">
     <ul>
       <li><a href="https://github.com/xMonUx" target="_blank"><i class="fab fa-github"></i></a></li>
@@ -92,7 +94,6 @@
     
 
 <main class="page__content">
-
     <section class="content__hero">
         <div class="content__hero--wrapper">
             <div class="content__hero bg-image">
@@ -110,7 +111,6 @@
             </div>
         </div>
     </section>
-
     <section class="content__about" id="about">
         <div class="content__about--wrapper">
             <div class="content__about--title">
@@ -148,10 +148,7 @@
             </div>
         </div>
     </section>
-
     <section class="content__projects" id="projects">
-
-
         <div class="content__projects--wrapper">
             <div class="content__projects--filters">
                 <div class="projects__content--title">Latest projects</div>
@@ -221,18 +218,104 @@
                   </div>
                 </li>
               </ul>
-
         </div>
-
-
-
-
-
     </section>
 
     <section class="content__skills" id="skills">
-        
+        <div class="content__skills--title">
+          Skills
+        </div>
+        <div class="content__skills--wrapper">
+          <ul class="content__skills--circles">
+            <li class="skills__circles--item">
+              <div class="circle__item--wrapper">
+                <div class="circle__item--content">
+                  <h2 class="circle__item--title">HTML</h2>
+                  <p class="circle__item--desc"><div id="skill12"></div></p>
+                </div>
+              </div>
+            </li>
+            <li class="skills__circles--item">
+              <div class="circle__item--wrapper">
+                <div class="circle__item--content">
+                  <h2 class="circle__item--title">CSS</h2>
+                  <p class="circle__item--desc"><div id="skill13"></div></p>
+                </div>
+              </div>
+            </li>
+            <li class="skills__circles--item">
+              <div class="circle__item--wrapper">
+                <div class="circle__item--content">
+                  <h2 class="circle__item--title">JavaScript</h2>
+                  <p class="circle__item--desc"><div id="skill14"></div></p>
+                </div>
+              </div>
+            </li>
+            <li class="skills__circles--item">
+              <div class="circle__item--wrapper">
+                <div class="circle__item--content">
+                  <h2 class="circle__item--title">React</h2>
+                  <p class="circle__item--desc"><div id="skill15"></div></p>
+                </div>
+              </div>
+            </li>
+            <li class="skills__circles--item">
+              <div class="circle__item--wrapper">
+                <div class="circle__item--content">
+                  <h2 class="circle__item--title">Node</h2>
+                  <p class="circle__item--desc"><div id="skill16"></div></p>
+                </div>
+              </div>
+            </li>
+            <li class="skills__circles--item">
+              <div class="circle__item--wrapper">
+                <div class="circle__item--content">
+                  <h2 class="circle__item--title">WebDesign</h2>
+                  <p class="circle__item--desc"><div id="skill17"></div></p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      
     </section>
+
+    <section class="content__contact" id="contact">
+      <div class="content__contact--title">
+        Let's stay in touch!
+      </div>
+      <div class="content__contact-form--wrapper">
+
+        <div id="contact-form--container">
+          <form action="" id="contact" method="post">
+            <fieldset>
+              <input type="text" placeholder="Your name" tabindex="1" required>
+            </fieldset>
+            <fieldset>
+              <input type="email" placeholder="Your Email address" tabindex="2" required>
+            </fieldset>
+            <fieldset>
+              <textarea placeholder="Type your message here..." tabindex="3"></textarea>
+            </fieldset>
+            <fieldset>
+              <button name="submit" type="submit" id="contact-submit">Submit</button>
+            </fieldset>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+    <footer class="page__footer">
+      <canvas class="zdog-canvas" width="340"></canvas>
+      <div class="page__footer--bottom">
+          <a class="footer__bottom--text">Adrian Jaros © 2023 All rights reserved.</a>
+      </div>
+
+  </footer>
 
 
 
