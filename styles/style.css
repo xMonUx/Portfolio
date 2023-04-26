@@ -6,7 +6,8 @@
 :root{
 
   /*========== Colors ==========*/
-  --background-color: #131414;
+  --background-color: #0f1011;
+
   --navbar-color: rgba(15, 15, 15, 0.8);
   --navbar-collapsed: rgba(15, 15, 15, 0.8);
   --secondary-color: #4e111c;
@@ -198,6 +199,7 @@ body::-webkit-scrollbar {
   position: fixed;
   top: 70vh;
   right: 2%;
+  z-index: 1001;
 }
 
 .content__social-links li {
@@ -729,6 +731,7 @@ vertical-align: middle;
   justify-content: center;
   align-items: center;
   text-align: center;
+  background: #131414 !important;
 }
 
 .content__contact--title {
@@ -754,7 +757,7 @@ vertical-align: middle;
 }
 
 #contact {
-  background: var(--background-color);
+
   padding: 1.3rem;
   margin: 3rem 0;
 }
@@ -783,7 +786,9 @@ vertical-align: middle;
 	-webkit-transition: border-color 0.3s ease-in-out;
 	-moz-transition: border-color 0.3s ease-in-out;
 	transition: border-color 0.3s ease-in-out;
-	border: 1px solid #AAA;
+  border-width: 1px;
+  border-style: solid;
+  border-image: linear-gradient(to right, #8A2387, #E94057, #c94b4b) 1;
 }
 
 #contact textarea {
@@ -819,7 +824,9 @@ vertical-align: middle;
 #contact input:focus, 
 #contact textarea:focus {
 	outline: 0;
-	border: 1px solid #999;
+  border-width: 1px;
+  border-style: solid;
+  border-image: linear-gradient(to right, #8A2387, #E94057, #c94b4b) 1;
 }
 ::-webkit-input-placeholder {
  color: #888;

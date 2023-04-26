@@ -280,8 +280,8 @@ var bar1 = new ProgressBar.Circle(skill12, {
   text: {
     autoStyleContainer: false
   },
-  from: { color: '#4d4c4b', width: 1 },
-  to: { color: '#4d4c4b', width: 2 },
+  from: { color: '#f6f3ed', width: 1 },
+  to: { color: '#f6f3ed', width: 2 },
 
   step: function(state, circle) {
     circle.path.setAttribute('stroke', state.color);
@@ -306,8 +306,8 @@ var bar2 = new ProgressBar.Circle(skill13, {
   text: {
     autoStyleContainer: false
   },
-  from: { color: '#4d4c4b', width: 1 },
-  to: { color: '#4d4c4b', width: 2 },
+  from: { color: '#f6f3ed', width: 1 },
+  to: { color: '#f6f3ed', width: 2 },
 
   step: function(state, circle) {
     circle.path.setAttribute('stroke', state.color);
@@ -332,8 +332,8 @@ var bar3 = new ProgressBar.Circle(skill14, {
   text: {
     autoStyleContainer: false
   },
-  from: { color: '#4d4c4b', width: 1 },
-  to: { color: '#4d4c4b', width: 2 },
+  from: { color: '#f6f3ed', width: 1 },
+  to: { color: '#f6f3ed', width: 2 },
 
   step: function(state, circle) {
     circle.path.setAttribute('stroke', state.color);
@@ -358,8 +358,8 @@ var bar4 = new ProgressBar.Circle(skill15, {
   text: {
     autoStyleContainer: false
   },
-  from: { color: '#4d4c4b', width: 1 },
-  to: { color: '#4d4c4b', width: 2 },
+  from: { color: '#f6f3ed', width: 1 },
+  to: { color: '#f6f3ed', width: 2 },
 
   step: function(state, circle) {
     circle.path.setAttribute('stroke', state.color);
@@ -384,8 +384,8 @@ var bar5 = new ProgressBar.Circle(skill16, {
   text: {
     autoStyleContainer: false
   },
-  from: { color: '#4d4c4b', width: 1 },
-  to: { color: '#4d4c4b', width: 2 },
+  from: { color: '#f6f3ed', width: 1 },
+  to: { color: '#f6f3ed', width: 2 },
 
   step: function(state, circle) {
     circle.path.setAttribute('stroke', state.color);
@@ -410,8 +410,8 @@ var bar6 = new ProgressBar.Circle(skill17, {
   text: {
     autoStyleContainer: false
   },
-  from: { color: '#4d4c4b', width: 1 },
-  to: { color: '#4d4c4b', width: 2 },
+  from: { color: '#f6f3ed', width: 1 },
+  to: { color: '#f6f3ed', width: 2 },
 
   step: function(state, circle) {
     circle.path.setAttribute('stroke', state.color);
@@ -439,6 +439,9 @@ let illo = new Zdog.Illustration({
   onDragStart: function() {
     isSpinning = false;
   },
+  onDragEnd: function() {
+    isSpinning = true;
+  },
 });
 
 let anchor = new Zdog.Anchor({
@@ -457,7 +460,7 @@ new Zdog.Shape({
   ],
   closed: false,
   stroke: 10,
-  color: '#636'
+  color: '#8A2387'
 });
 
 new Zdog.Shape({
@@ -470,7 +473,7 @@ new Zdog.Shape({
   ],
   closed: false,
   stroke: 10,
-  color: '#fff'
+  color: '#c94b4b'
 });
 
 function animate() {
@@ -481,6 +484,10 @@ function animate() {
 
 animate();
 
+
+//=============================
+// Waypoints
+//=============================
 
 var waypoint = new Waypoint({
   element: document.getElementById('skills'),
