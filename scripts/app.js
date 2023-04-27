@@ -3,20 +3,9 @@
 // Navbar || socials show/hide > 550px
 //=============================
 
-let timer;
-let isIdle = false;
-const idleTime = 2000; //czas bezczynności, po którym funkcja zostanie wykonana
-
 window.addEventListener('scroll', function() {
-  const navbar = document.querySelector('.content__navbar');
   const arrow = document.querySelector('.content__hero-arrow');
   const socials = document.querySelector('.content__social-links');
-
-  if (this.window.pageYOffset > 350) {
-    navbar.classList.remove('content__navbar--hide');
-  } else {
-    navbar.classList.add('content__navbar--hide');
-  }
 
   if (this.window.pageYOffset > 350) {
     arrow.classList.add('arrowHide');
@@ -30,29 +19,58 @@ window.addEventListener('scroll', function() {
     socials.classList.add('content__social-links--hide');
   }
 
-  clearTimeout(timer);
-  if (!isIdle) {
-    timer = setTimeout(function() {
-      navbar.classList.add('content__navbar--hide');
-      isIdle = true;
-    }, idleTime);
-  }
 });
 
-//restart timera gdy użytkownik jest aktywny
-window.addEventListener('mousemove', function() {
-  const navbar = document.querySelector('.content__navbar');
+// let timer;
+// let isIdle = false;
+// const idleTime = 2000; //czas bezczynności, po którym funkcja zostanie wykonana
 
-  if (isIdle) {
-    navbar.classList.remove('content__navbar--hide');
-    isIdle = false;
-    clearTimeout(timer);
-    timer = setTimeout(function() {
-      navbar.classList.add('content__navbar--hide');
-      isIdle = true;
-    }, idleTime);
-  }
-});
+// window.addEventListener('scroll', function() {
+//   const navbar = document.querySelector('.content__navbar');
+//   const arrow = document.querySelector('.content__hero-arrow');
+//   const socials = document.querySelector('.content__social-links');
+
+//   if (this.window.pageYOffset > 350) {
+//     navbar.classList.remove('content__navbar--hide');
+//   } else {
+//     navbar.classList.add('content__navbar--hide');
+//   }
+
+//   if (this.window.pageYOffset > 350) {
+//     arrow.classList.add('arrowHide');
+//   } else {
+//     arrow.classList.remove('arrowHide');
+//   }
+
+//   if (this.window.pageYOffset > 400) {
+//     socials.classList.remove('content__social-links--hide');
+//   } else {
+//     socials.classList.add('content__social-links--hide');
+//   }
+
+//   clearTimeout(timer);
+//   if (!isIdle) {
+//     timer = setTimeout(function() {
+//       navbar.classList.add('content__navbar--hide');
+//       isIdle = true;
+//     }, idleTime);
+//   }
+// });
+
+// //restart timera gdy użytkownik jest aktywny
+// window.addEventListener('mousemove', function() {
+//   const navbar = document.querySelector('.content__navbar');
+
+//   if (isIdle) {
+//     navbar.classList.remove('content__navbar--hide');
+//     isIdle = false;
+//     clearTimeout(timer);
+//     timer = setTimeout(function() {
+//       navbar.classList.add('content__navbar--hide');
+//       isIdle = true;
+//     }, idleTime);
+//   }
+// });
 
 // =============================
 // Refresh page scroll on top
@@ -100,34 +118,12 @@ if (history.scrollRestoration) {
 //   }
 // }, 2000);
 
-//=============================
-// Navbar hamburger menu toggle
-//=============================
-document.addEventListener("DOMContentLoaded", function() {
-  const hamburger = document.querySelector('.content__navbar--collapse');
-  const hamburgerActive = document.querySelector('.content__navbar--collapsed')  
-
-  let isHamburgerActive = false;
-
-  hamburger.addEventListener("click", function() {
-    if (!isHamburgerActive) {
-      hamburgerActive.classList.add('active');
-      hamburgerActive.classList.remove('hidding');
-      isHamburgerActive = true;
-    } else {
-      hamburgerActive.classList.add('hidding');
-      isHamburgerActive = false;
-      setTimeout(function() {
-        hamburgerActive.classList.remove('active');
-      }, 500);
-    }
-  });
-});
 
 //=============================
 // Particles
 //=============================
   particlesJS("hero__particles", {
+    
     "particles": {
       "number": {
           "value": 110,
@@ -238,17 +234,12 @@ document.addEventListener("DOMContentLoaded", function() {
 window.sr = ScrollReveal({ reset: true });
 
 sr.reveal('.content__about', { 
-  viewFactor: 0.5,
+  viewFactor: 0.7,
   duration: 1000
 });
 
-sr.reveal('.content__projects', { 
-  viewFactor: 0.5,
-  duration: 1000
-});
-
-sr.reveal('.content__skills', { 
-  viewFactor: 0.5,
+sr.reveal('.content__hero', { 
+  viewFactor: 0.7,
   duration: 1000
 });
 

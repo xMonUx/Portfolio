@@ -41,14 +41,19 @@
 
   /*========== Font and typography ==========*/
   --body-font: 'Oxanium', sans-serif;
-  --big-font-size: 3.125rem;
+
+
+
+
+  --h1-font-size: 2.25rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --smaller-font-size: .813rem;
+  --small-font-size: .875rem;
+  --normal-font-size: 1rem;
   --medium-font-size: 1.5rem;
-  --h1-font-size: 1.5rem;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
-  --smaller-font-size: .75rem;
+  --big-font-size: 3.125rem;
+  --biggest-font-size: 4rem;
 
   /*========== z index ==========*/
   --z-tooltip: 10;
@@ -62,14 +67,7 @@
 /* Responsive typography */
 @media screen and (min-width: 992px) {
   :root {
-    --biggest-font-size: 4rem;
 
-    --h1-font-size: 2.25rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
   }
 }
 
@@ -121,7 +119,7 @@ body::-webkit-scrollbar {
 
 
 /*=============== NAVBAR ===============*/
-.content__navbar {
+/* .content__navbar {
   width: 100%;
   height: 100px;
 
@@ -193,7 +191,7 @@ body::-webkit-scrollbar {
 
 .content__navbar--list li:hover:before {
   width: 100%;
-}
+} */
 
 /*=============== SOCIAL LINKS ===============*/
 .content__social-links {
@@ -345,17 +343,14 @@ section, header {
                   HERO
 ======================================*/
 .content__hero {
-  width: 100%;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 
-
 .content__hero--content {
-  position: absolute;
   text-align: center;
-  margin-top: -9.37rem;
 }
 
 .content__hero--content h1, h2 {
@@ -367,55 +362,50 @@ section, header {
   letter-spacing: 0.2em;
   z-index: 2; 
   margin: 0;
-  font-weight: 10;
 }
 
 .content__hero--content p {
-  font-size: var(--normal-font-size);
+  font-size: var(--medium-font-size);
 }
 
 .content__hero--particles {
-  position: relative; 
-  width: 56rem;
-  margin-top: -14rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw !important;
+  height: 100%;
+  overflow: hidden;
 }
 
 #hero__particles {
   position: absolute;
-  width: 100%;
-  margin-left: -1rem;
-  margin-top: -9rem;
-  z-index: 1; 
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  width: 50%;
+  height: 40%;
   overflow: hidden;
-  opacity: .6;
-}
-
-.particles__btn--wrapper {
-  position: absolute;
-  bottom: 12.5rem;
-  margin-left: -12.1rem;
 }
 
 .hero__particles--btn {
-  bottom: 25%;
-
-  text-decoration: none;
   position: absolute;
-  border: none;
+  left: 0;
+  right: 0;
+  bottom: 25%;
+  margin: 0 auto;
+
   font-size: var(--small-font-size);
-  font-family: inherit;
   color: var(--font-color);
   letter-spacing: 0.2em;
   text-transform: capitalize;
   width: 12rem; 
   height: 3rem;
-  line-height: 2em;
-  text-align: center;
   background: linear-gradient(90deg,#c94b4b,#8A2387, #E94057,#c94b4b);
   background-size: 300%;
   border-radius: 2rem;
   z-index: 1;
-  cursor: pointer;
 }
 
 .hero__particles--btn:before {
@@ -446,7 +436,11 @@ section, header {
 
 .content__hero-arrow{
   position: absolute;
-  bottom: 1rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  margin-bottom: 2rem;
   animation: arrowDown 1.4s infinite linear;
 }
 
@@ -496,14 +490,11 @@ section, header {
 .content__about--title {
   font-size: var(--h1-font-size);
   padding-bottom: 3rem;
+
 }
 
-.content__about--title p {
-  margin: 0 auto;
-}
 
 .about__title--add {
-  margin: 0 auto;
   font-size: var(--h3-font-size);
 }
 
@@ -687,6 +678,7 @@ section, header {
   height: 3rem;
   line-height: 2em;
   background: var(--background-color);
+  background-size: 90%;
   box-shadow: var(--shadow);
 
   background-size: 210%;
@@ -864,8 +856,8 @@ section, header {
 }
 
 #contact button[type="submit"]:hover {
-	background: var(--conic-gradient);
-  background-size: 110%;
+  background: linear-gradient(90deg,#c94b4b,#8A2387, #E94057,#c94b4b);
+  background-size: 200%;
   scale: 1.03;
 }
 
