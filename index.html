@@ -12,45 +12,51 @@
     responsive web design, 
     strony internetowe, 
     responsywne strony, 
-    grafika komputerowa, 
-    kreacja graficzna, 
     branding, 
     Warszawa, 
     ui design, 
     ux design, 
-    projektowanie logo, 
-    e-commerce, 
-    brand design, 
-    web development, 
-    e-commerce, 
+    web development,
+    react,
+    node,
+    javascript,
+    frontend,
     strony mobilne
     ">
 
+    <!-- JQuery -->
+    <script src="scripts/vendor/jquery.min.js"></script>
+
     <!-- AwesomeFonts -->
-    <script src="https://kit.fontawesome.com/bd626f218f.js" crossorigin="anonymous"></script>
+    <script src="scripts/vendor/fontawesome.js"></script>
 
     <!-- ParticlesJS -->
-    <script src="scripts/particles.min.js"></script> 
+    <script src="scripts/vendor/particles.min.js"></script> 
 
     <!-- Waypoints -->
     <script src="scripts/vendor/noframework.waypoints.js"></script>
     <script src="scripts/vendor/noframework.waypoints.min.js"></script>
 
     <!-- ScrollReveal -->
-    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script src="scripts/vendor/scrollreveal.min.js"></script>
 
     <!-- Mixitup -->
     <script src="scripts/vendor/mixitup.min.js"></script>
 
-    <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/1.0.0/dist/progressbar.js"></script>
-    <script src="https://unpkg.com/zdog@1/dist/zdog.dist.min.js"></script>
+    <!-- Zdog -->
+    <script src="scripts/vendor/zdog.dist.min.js"></script>
 
+    <!-- Progressbar -->
+    <script src="scripts/vendor/progressbar.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/5.2.0/shuffle.min.js"></script>
 
+    <!-- Main CSS -->
     <link rel="stylesheet" href="styles/style.css">
     
 </head>
 <body>
+
 <!-- <div class="page__loader">
     <div class="page__loader--button"><span>Let me introduce myself.</span></div>
     <div class="page__loader--background">
@@ -149,77 +155,94 @@
         </div>
     </section>
     <section class="content__projects" id="projects">
-        <div class="content__projects--wrapper">
-            <div class="content__projects--filters">
-                <div class="projects__content--title">Latest projects</div>
-                <ul class="content__projects--filters-list">
-                    <li class="projects__filters--item active-filter" data-filter="all">ALL</li>
-                    <li class="projects__filters--item" data-filter=".webdev">WEB DEVELOPMENT </li>
-                    <li class="projects__filters--item" data-filter=".webdesign">WEB DESIGN</li>
-                    <li class="projects__filters--item" data-filter=".apps">APPS</li>
-                    <li class="projects__filters--item" data-filter=".react">REACT</li>
-                    <li class="projects__filters--item" data-filter=".node">NODE</li>
-                </ul>
-            </div>
-            <ul class="content__projects--cards" data-ref="content__projects--cards">
-                <li class="projects__card--item webdev apps react node webdesign">
-                  <div class="card__item--wrapper">
-                    <div class="card__item--image"><img src="https://picsum.photos/500/300/?image=10"></div>
-                    <div class="card__item--content">
-                      <h2 class="card__item--title">Card Grid Layout</h2>
-                      <p class="card__item--desc">lorem ipsum doloro sit</p>
+      <div class="content__projects--wrapper">
+          <div class="content__projects--filters">
+              <div class="projects__content--title">Latest projects</div>
+              <!-- <ul class="content__projects--filters-list">
+                  <li class="projects__filters--item active-filter" data-filter="all">ALL</li>
+                  <li class="projects__filters--item" data-filter=".webdev">WEB DEVELOPMENT </li>
+                  <li class="projects__filters--item" data-filter=".webdesign">WEB DESIGN</li>
+                  <li class="projects__filters--item" data-filter=".apps">APPS</li>
+                  <li class="projects__filters--item" data-filter=".react">REACT</li>
+                  <li class="projects__filters--item" data-filter=".node">NODE</li>
+              </ul> -->
+          </div>
+          <ul class="content__projects--cards" data-ref="content__projects--cards">
+            <li>
+              <div class="projects__card--item">
+                <div class="projects__card--content">
+                  <div class="card__content--image"></div>
+                  <div class="card__content-bottom">
+                    <div class="card__content-bottom--title">
+                      DonBon
+                    </div>
+                    <div class="card__content-bottom--desc">
+                      An application created for streamers that allows viewers to call actions on the creator's computer.
+                    </div>
+                    <div>
+                      <button class="card__content-bottom--button"><a href="https://github.com/xMonUx/DonBon" target="_blank">GitHub</a></button>
                     </div>
                   </div>
-                </li>
-                <li class="projects__card--item webdev react node">
-                  <div class="card__item--wrapper">
-                    <div class="card__item--image"><img src="https://picsum.photos/500/300/?image=5"></div>
-                    <div class="card__item--content">
-                      <h2 class="card__item--title">Card Grid Layout</h2>
-                      <p class="card__item--desc">lorem ipsum doloro sit</p>
+                </div>
+            </li>
+            <li>
+              <div class="projects__card--item">
+                <div class="projects__card--content">
+                  <div class="card__content--image"></div>
+                  <div class="card__content-bottom">
+                    <div class="card__content-bottom--title">
+                      DonBon
+                    </div>
+                    <div class="card__content-bottom--desc">
+                      An application created for streamers that allows viewers to call actions on the creator's computer.
+                    </div>
+                    <div>
+                      <button class="card__content-bottom--button"><a href="https://github.com/xMonUx/DonBon" target="_blank">GitHub</a></button>
+                    </div>
+                  </div>
+                </div>
+            </li>
+            <li>
+              <div class="projects__card--item">
+                <div class="projects__card--content">
+                  <div class="card__content--image"></div>
+                  <div class="card__content-bottom">
+                    <div class="card__content-bottom--title">
+                      DonBon
+                    </div>
+                    <div class="card__content-bottom--desc">
+                      An application created for streamers that allows viewers to call actions on the creator's computer.
+                    </div>
+                    <div>
+                      <button class="card__content-bottom--button"><a href="https://github.com/xMonUx/DonBon" target="_blank">GitHub</a></button>
+                    </div>
+                  </div>
+                </div>
+            </li>
+            <li>
+              <div class="projects__card--item">
+                <div class="projects__card--content">
+                  <div class="card__content--image"></div>
+                  <div class="card__content-bottom">
+                    <div class="card__content-bottom--title">
+                      DonBon
+                    </div>
+                    <div class="card__content-bottom--desc">
+                      An application created for streamers that allows viewers to call actions on the creator's computer.
+                    </div>
+                    <div>
+                      <button class="card__content-bottom--button"><a href="https://github.com/xMonUx/DonBon" target="_blank">GitHub</a></button>
+                    </div>
+                  </div>
+                </div>
+            </li>
+            
+            
 
-                    </div>
-                  </div>
-                </li>
-                <li class="projects__card--item react node webdesign">
-                  <div class="card__item--wrapper">
-                    <div class="card__item--image"><img src="https://picsum.photos/500/300/?image=11"></div>
-                    <div class="card__item--content">
-                      <h2 class="card__item--title">Card Grid Layout</h2>
-                      <p class="card__item--desc">lorem ipsum doloro sit</p>
-                    </div>
-                  </div>
-                </li>
-                <li class="projects__card--item node">
-                  <div class="card__item--wrapper">
-                    <div class="card__item--image"><img src="https://picsum.photos/500/300/?image=14"></div>
-                    <div class="card__item--content">
-                      <h2 class="card__item--title">Card Grid Layout</h2>
-                      <p class="card__item--desc">lorem ipsum doloro sit</p>
-                    </div>
-                  </div>
-                </li>
-                <li class="projects__card--item react node">
-                  <div class="card__item--wrapper">
-                    <div class="card__item--image"><img src="https://picsum.photos/500/300/?image=17"></div>
-                    <div class="card__item--content">
-                      <h2 class="card__item--title">Card Grid Layout</h2>
-                      <p class="card__item--desc">lorem ipsum doloro sit</p>
-                    </div>
-                  </div>
-                </li>
-                <li class="projects__card--item apps webdesign">
-                  <div class="card__item--wrapper">
-                    <div class="card__item--image"><img src="https://picsum.photos/500/300/?image=2"></div>
-                    <div class="card__item--content">
-                      <h2 class="card__item--title">Card Grid Layout</h2>
-                      <p class="card__item--desc">lorem ipsum doloro sit</p>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-        </div>
-    </section>
+
+          </ul>
+      </div>
+  </section>
 
     <section class="content__skills" id="skills">
         <div class="content__skills--title">
@@ -308,7 +331,9 @@
 
       </div>
 
+
     </section>
+
     <footer class="page__footer">
       <canvas class="zdog-canvas" width="340"></canvas>
       <div class="page__footer--bottom">
@@ -323,11 +348,10 @@
 </main>
 
 
-
-
-
     <!-- MAIN JS -->
     <script src="scripts/app.js"></script>
+
+  
 
 
 </body>

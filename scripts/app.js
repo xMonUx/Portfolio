@@ -267,165 +267,35 @@ var mixer = mixitup(projectList, {
   }
 });
 
+
 //=============================
 // ProgressBar.js
 //=============================
-var bar1 = new ProgressBar.Circle(skill12, {
-  color: '#f6f3ed',
+function createProgressBar(skill) {
+  return new ProgressBar.Circle(skill, {
+    color: '#f6f3ed',
+    strokeWidth: 4,
+    trailWidth: 1,
+    easing: 'easeInOut',
+    duration: 1400,
+    text: { autoStyleContainer: false },
+    from: { color: 'rgb(0,255,0)', width: 1 },
+    to: { color: 'rgb(255,0,255)', width: 2 },
+    step: function(state, circle) {
+      circle.path.setAttribute('stroke', state.color);
+      circle.path.setAttribute('stroke-width', state.width);
+      var value = Math.round(circle.value() * 100);
+      circle.setText(value === 0 ? '' : value + '%');
+    },
+  });
+}
 
-  strokeWidth: 4,
-  trailWidth: 1,
-  easing: 'easeInOut',
-  duration: 1400,
-  text: {
-    autoStyleContainer: false
-  },
-  from: { color: '#f6f3ed', width: 1 },
-  to: { color: '#f6f3ed', width: 2 },
-
-  step: function(state, circle) {
-    circle.path.setAttribute('stroke', state.color);
-    circle.path.setAttribute('stroke-width', state.width);
-
-    var value = Math.round(circle.value() * 100);
-    if (value === 0) {
-      circle.setText('');
-    } else {
-      circle.setText(value + '%');
-    }
-
-  }
-});
-var bar2 = new ProgressBar.Circle(skill13, {
-  color: '#f6f3ed',
-
-  strokeWidth: 4,
-  trailWidth: 1,
-  easing: 'easeInOut',
-  duration: 1400,
-  text: {
-    autoStyleContainer: false
-  },
-  from: { color: '#f6f3ed', width: 1 },
-  to: { color: '#f6f3ed', width: 2 },
-
-  step: function(state, circle) {
-    circle.path.setAttribute('stroke', state.color);
-    circle.path.setAttribute('stroke-width', state.width);
-
-    var value = Math.round(circle.value() * 100);
-    if (value === 0) {
-      circle.setText('');
-    } else {
-      circle.setText(value + '%');
-    }
-
-  }
-});
-var bar3 = new ProgressBar.Circle(skill14, {
-  color: '#f6f3ed',
-
-  strokeWidth: 4,
-  trailWidth: 1,
-  easing: 'easeInOut',
-  duration: 1400,
-  text: {
-    autoStyleContainer: false
-  },
-  from: { color: '#f6f3ed', width: 1 },
-  to: { color: '#f6f3ed', width: 2 },
-
-  step: function(state, circle) {
-    circle.path.setAttribute('stroke', state.color);
-    circle.path.setAttribute('stroke-width', state.width);
-
-    var value = Math.round(circle.value() * 100);
-    if (value === 0) {
-      circle.setText('');
-    } else {
-      circle.setText(value + '%');
-    }
-
-  }
-});
-var bar4 = new ProgressBar.Circle(skill15, {
-  color: '#f6f3ed',
-
-  strokeWidth: 4,
-  trailWidth: 1,
-  easing: 'easeInOut',
-  duration: 1400,
-  text: {
-    autoStyleContainer: false
-  },
-  from: { color: '#f6f3ed', width: 1 },
-  to: { color: '#f6f3ed', width: 2 },
-
-  step: function(state, circle) {
-    circle.path.setAttribute('stroke', state.color);
-    circle.path.setAttribute('stroke-width', state.width);
-
-    var value = Math.round(circle.value() * 100);
-    if (value === 0) {
-      circle.setText('');
-    } else {
-      circle.setText(value + '%');
-    }
-
-  }
-});
-var bar5 = new ProgressBar.Circle(skill16, {
-  color: '#f6f3ed',
-
-  strokeWidth: 4,
-  trailWidth: 1,
-  easing: 'easeInOut',
-  duration: 1400,
-  text: {
-    autoStyleContainer: false
-  },
-  from: { color: '#f6f3ed', width: 1 },
-  to: { color: '#f6f3ed', width: 2 },
-
-  step: function(state, circle) {
-    circle.path.setAttribute('stroke', state.color);
-    circle.path.setAttribute('stroke-width', state.width);
-
-    var value = Math.round(circle.value() * 100);
-    if (value === 0) {
-      circle.setText('');
-    } else {
-      circle.setText(value + '%');
-    }
-
-  }
-});
-var bar6 = new ProgressBar.Circle(skill17, {
-  color: '#f6f3ed',
-
-  strokeWidth: 4,
-  trailWidth: 1,
-  easing: 'easeInOut',
-  duration: 1400,
-  text: {
-    autoStyleContainer: false
-  },
-  from: { color: '#f6f3ed', width: 1 },
-  to: { color: '#f6f3ed', width: 2 },
-
-  step: function(state, circle) {
-    circle.path.setAttribute('stroke', state.color);
-    circle.path.setAttribute('stroke-width', state.width);
-
-    var value = Math.round(circle.value() * 100);
-    if (value === 0) {
-      circle.setText('');
-    } else {
-      circle.setText(value + '%');
-    }
-
-  }
-});
+var bar1 = createProgressBar(skill12);
+var bar2 = createProgressBar(skill13);
+var bar3 = createProgressBar(skill14);
+var bar4 = createProgressBar(skill15);
+var bar5 = createProgressBar(skill16);
+var bar6 = createProgressBar(skill17);
 
 //=============================
 // Zdog
