@@ -40,16 +40,8 @@
     <!-- ScrollReveal -->
     <script src="scripts/vendor/scrollreveal.min.js"></script>
 
-    <!-- Mixitup -->
-    <script src="scripts/vendor/mixitup.min.js"></script>
-
     <!-- Zdog -->
     <script src="scripts/vendor/zdog.dist.min.js"></script>
-
-    <!-- Progressbar -->
-    <script src="scripts/vendor/progressbar.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/5.2.0/shuffle.min.js"></script>
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="styles/style.css">
@@ -58,13 +50,13 @@
 <body>
 
 <!-- <div class="page__loader">
-    <div class="page__loader--button"><span>Let me introduce myself.</span></div>
-    <div class="page__loader--background">
-        <div class="loader__circle">
-            <div class="loader__circle--glow"></div>
-            <div class="loader__circle--inner"></div>
-        </div>
-    </div>
+  <div class="page__loader--button"><span>Let me introduce myself.</span></div>
+  <div class="page__loader--background">
+      <div class="loader__circle">
+          <div class="loader__circle--glow"></div>
+          <div class="loader__circle--inner"></div>
+      </div>
+  </div>
 </div> -->
 
 <nav class="content__navbar content__navbar--fixed">
@@ -72,68 +64,70 @@
 </nav>
 
 <div class="content__social-links content__social-links--hide">
-    <ul>
-      <li><a href="https://github.com/xMonUx" target="_blank"><i class="fab fa-github"></i></a></li>
-      <li><a href="https://codepen.io/MonUx" target="_blank"><i class="fab fa-codepen"></i></a></li>
-      <li><a href="https://www.linkedin.com/in/adrian-jaros-8ba678172/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-      <li><a href="#" target="_blank"><i class="fab fa-whatsapp" ></i></a></li>
-    </ul>
+  <ul>
+    <li><a href="https://github.com/xMonUx" target="_blank"><i class="fab fa-github"></i></a></li>
+    <li><a href="https://codepen.io/MonUx" target="_blank"><i class="fab fa-codepen"></i></a></li>
+    <li><a href="https://www.linkedin.com/in/adrian-jaros-8ba678172/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+    <li><a href="#" target="_blank"><i class="fab fa-whatsapp" ></i></a></li>
+  </ul>
 </div>
-    
+
+
 <main class="page__content">
 
-    <section class="content__hero">
-        <div class="content__hero--wrapper">
-          <div class="content__hero--content">
-              <h1>Front-End Web Developer</h1>
-              <p>Adrian Jaros</p>
-                <div class="content__hero--particles" >
-                  <div id="hero__particles">
-                </div>
+  <div id="blob"></div>
 
+
+    <section class="content__hero">
+      <div class="content__hero--wrapper">
+        <div class="content__hero--content">
+            <h1>Front-End Web Developer</h1>
+            <p>Adrian Jaros</p>
+              <div class="content__hero--particles" >
+                <div id="hero__particles">
               </div>
-              <a href="#about" class="particles__btn--wrapper"><button class="hero__particles--btn">Discover</button></a>
-              <div class="content__hero-arrow"><i class="fa fa-angle-down"></i></div>
-          </div>
+
+            </div>
+            <a href="#about" class="particles__btn--wrapper"><button class="hero__particles--btn">Discover</button></a>
+            <div class="content__hero-arrow"><i class="fa fa-angle-down"></i></div>
         </div>
+      </div>
     </section>
     
     <section class="content__about" id="about">
-        <div class="content__about--wrapper">
-            <div class="content__about--title">
-                <p>Hi! I'm Adrian, a frontend developer currently looking for a full-time job.</p> 
-                <p>Most of my projects in my portfolio are things that i did for fun. </p>
-                <p class="about__title--add">Or my friends asked me to.</p> 
-            </div>
-            <span class="about__title--technologies">So far, I have worked with:</span> 
-            <div class="content__about--content grid">
-                <div class="about__content--item-1">
-                    <ul>
-                        <li>JS/jquery</li>
-                        <li>Bootstrap</li>
-                        <li>Responsive Web Design</li>
-                        <li>Node</li>
-                        <li>React</li>
-                    </ul>
-                </div>
-                <div class="about__content--item-2">
-                    <ul>
-                        <li>Three.js</li>
-                        <li>Particles.js</li>
-                        <li>Modernizr.js</li>
-
-                    </ul>
-                </div>
-                <div class="about__content--item-3">
-                    <ul>
-                        <li>Figma</li>
-                        <li>Canva</li>
-                        <li>Adobe Photoshop</li>
-                        <li>Adobe Ilustrator</li>
-                    </ul>
-                </div>
-            </div>
+      <div class="content__about--title">
+        <p>Hi! I'm Adrian, a frontend developer currently looking for a full-time job.</p> 
+        <p>Most of my projects in my portfolio are things that i did for fun. </p>
+        <p class="about__title--add">Or my friends asked me to.</p> 
+      </div>
+      <div class="content__about--list-wrapper">
+        <span class="about__list-wrapper--title">So far, I have worked with:</span>
+        
+        <div class="content__about--list">
+          <ul class="about__list--item">
+            <li>JS/jquery</li>
+            <li>Bootstrap</li>
+            <li>Responsive Web Design</li>
+            <li>Node</li>
+            <li>React</li>
+          </ul>
+  
+          <ul class="about__list--item">
+            <li>Three.js</li>
+            <li>Particles.js</li>
+            <li>Modernizr.js</li>
+          </ul>
+  
+          <ul class="about__list--item">
+            <li>Figma</li>
+            <li>Canva</li>
+            <li>Adobe Photoshop</li>
+            <li>Adobe Ilustrator</li>
+          </ul>
         </div>
+
+      </div>
+      
     </section>
     <section class="content__projects" id="projects">
       <div class="content__projects--wrapper">
@@ -217,123 +211,57 @@
                   </div>
                 </div>
             </li>
-            
-            
-
-
+          
           </ul>
       </div>
   </section>
 
-    <section class="content__skills" id="skills">
-        <div class="content__skills--title">
-          Skills
-        </div>
-        <div class="content__skills--wrapper">
-          <ul class="content__skills--circles">
-            <li class="skills__circles--item">
-              <div class="circle__item--wrapper">
-                <div class="circle__item--content">
-                  <h2 class="circle__item--title">HTML</h2>
-                  <p class="circle__item--desc"><div id="skill12"></div></p>
-                </div>
-              </div>
-            </li>
-            <li class="skills__circles--item">
-              <div class="circle__item--wrapper">
-                <div class="circle__item--content">
-                  <h2 class="circle__item--title">CSS</h2>
-                  <p class="circle__item--desc"><div id="skill13"></div></p>
-                </div>
-              </div>
-            </li>
-            <li class="skills__circles--item">
-              <div class="circle__item--wrapper">
-                <div class="circle__item--content">
-                  <h2 class="circle__item--title">JavaScript</h2>
-                  <p class="circle__item--desc"><div id="skill14"></div></p>
-                </div>
-              </div>
-            </li>
-            <li class="skills__circles--item">
-              <div class="circle__item--wrapper">
-                <div class="circle__item--content">
-                  <h2 class="circle__item--title">React</h2>
-                  <p class="circle__item--desc"><div id="skill15"></div></p>
-                </div>
-              </div>
-            </li>
-            <li class="skills__circles--item">
-              <div class="circle__item--wrapper">
-                <div class="circle__item--content">
-                  <h2 class="circle__item--title">Node</h2>
-                  <p class="circle__item--desc"><div id="skill16"></div></p>
-                </div>
-              </div>
-            </li>
-            <li class="skills__circles--item">
-              <div class="circle__item--wrapper">
-                <div class="circle__item--content">
-                  <h2 class="circle__item--title">WebDesign</h2>
-                  <p class="circle__item--desc"><div id="skill17"></div></p>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-      
-    </section>
-
-    <section class="content__contact" id="contact">
-      <div class="content__contact--title">
-        Let's stay in touch!
+  <section class="content__skills" id="skills">
+      <div class="content__skills--title">
+        Skills
       </div>
-      <div class="content__contact-form--wrapper">
+      <div class="content__skills--wrapper">
+        <ul class="content__skills--circles">
 
-        <div id="contact-form--container">
-          <form action="" id="contact" method="post">
-            <fieldset>
-              <input type="text" placeholder="Your name" tabindex="1" required>
-            </fieldset>
-            <fieldset>
-              <input type="email" placeholder="Your Email address" tabindex="2" required>
-            </fieldset>
-            <fieldset>
-              <textarea placeholder="Type your message here..." tabindex="3"></textarea>
-            </fieldset>
-            <fieldset>
-              <button name="submit" type="submit" id="contact-submit">Submit</button>
-            </fieldset>
-
-          </form>
-
-        </div>
-
+        </ul>
       </div>
+  </section>
 
-
-    </section>
-
-    <footer class="page__footer">
-      <canvas class="zdog-canvas" width="340"></canvas>
-      <div class="page__footer--bottom">
-          <a class="footer__bottom--text">Adrian Jaros © 2023 All rights reserved.</a>
+  <section class="content__contact" id="contact">
+    <div class="content__contact--title">
+      Let's stay in touch!
+    </div>
+    <div class="content__contact-form--wrapper">
+      <div id="contact-form--container">
+        <form action="" id="contact" method="post">
+          <fieldset>
+            <input type="text" placeholder="Your name" tabindex="1" required>
+          </fieldset>
+          <fieldset>
+            <input type="email" placeholder="Your Email address" tabindex="2" required>
+          </fieldset>
+          <fieldset>
+            <textarea placeholder="Type your message here..." tabindex="3"></textarea>
+          </fieldset>
+          <fieldset>
+            <button name="submit" type="submit" id="contact-submit">Submit</button>
+          </fieldset>
+        </form>
       </div>
+    </div>
+  </section>
 
+  <footer class="page__footer">
+    <canvas class="zdog-canvas" width="340"></canvas>
+    <div class="page__footer--bottom">
+        <a class="footer__bottom--text">Adrian Jaros © 2023 All rights reserved.</a>
+    </div>
   </footer>
-
-
-
 
 </main>
 
-
     <!-- MAIN JS -->
     <script src="scripts/app.js"></script>
-
-  
-
 
 </body>
 </html>

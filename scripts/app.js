@@ -233,60 +233,15 @@ if (history.scrollRestoration) {
 //=============================
 window.sr = ScrollReveal({ reset: true });
 
-sr.reveal('.content__about', { 
-  viewFactor: 0.7,
-  duration: 1000
-});
+// sr.reveal('.content__about', { 
+//   viewFactor: 0.7,
+//   duration: 1000
+// });
 
 sr.reveal('.content__hero', { 
   viewFactor: 0.7,
   duration: 1000
 });
-
-//=============================
-// MixItUp
-//=============================
-var projectList = document.querySelector('.content__projects--cards');
-
-var mixer = mixitup(projectList, {
-  selectors: {
-    target: '.projects__card--item'
-  },
-  animation: {
-    easing: 'cubic-bezier(0.86, 0, 0.07, 1)',
-    duration: 600
-  }
-});
-
-
-//=============================
-// ProgressBar.js
-//=============================
-function createProgressBar(skill) {
-  return new ProgressBar.Circle(skill, {
-    color: '#f6f3ed',
-    strokeWidth: 4,
-    trailWidth: 1,
-    easing: 'easeInOut',
-    duration: 1400,
-    text: { autoStyleContainer: false },
-    from: { color: 'rgb(0,255,0)', width: 1 },
-    to: { color: 'rgb(255,0,255)', width: 2 },
-    step: function(state, circle) {
-      circle.path.setAttribute('stroke', state.color);
-      circle.path.setAttribute('stroke-width', state.width);
-      var value = Math.round(circle.value() * 100);
-      circle.setText(value === 0 ? '' : value + '%');
-    },
-  });
-}
-
-var bar1 = createProgressBar(skill12);
-var bar2 = createProgressBar(skill13);
-var bar3 = createProgressBar(skill14);
-var bar4 = createProgressBar(skill15);
-var bar5 = createProgressBar(skill16);
-var bar6 = createProgressBar(skill17);
 
 //=============================
 // Zdog
@@ -353,12 +308,19 @@ animate();
 var waypoint = new Waypoint({
   element: document.getElementById('skills'),
   handler: function(direction) {
-    bar1.animate(0.94)
-    bar2.animate(0.87)
-    bar3.animate(0.64)
-    bar4.animate(0.69)
-    bar5.animate(0.57)
-    bar6.animate(0.82)
+
   }
 })
 
+/* -- Glow effect -- */
+
+const blob = document.getElementById("blob");
+
+window.onpointermove = event => { 
+  const { clientX, clientY } = event;
+  
+  blob.animate({
+    left: `${clientX}px`,
+    top: `${clientY}px`
+  }, { duration: 3000, fill: "forwards" });
+}
