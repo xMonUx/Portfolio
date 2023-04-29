@@ -1,5 +1,5 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url(https://fonts.googleapis.com/css?family=Oxanium);
+@import url(/fonts/oxanium.css);
 
 
 /*=============== VARIABLES CSS ===============*/
@@ -8,9 +8,7 @@
   /*========== Colors ==========*/
   --background-color: #131414;
 
-  --navbar-color: rgba(15, 15, 15, 0.8);
-  --navbar-collapsed: rgba(15, 15, 15, 0.8);
-  --secondary-color: #4e111c;
+  --navbar-color: #131414;
   --white: #f6f3ed;
 
   --standard-transition: all 1s ease;
@@ -107,79 +105,99 @@ body::-webkit-scrollbar {
 
 
 /*=============== NAVBAR ===============*/
-/* .content__navbar {
-  width: 100%;
-  height: 100px;
-
-  text-align: center;
-  letter-spacing: 0.1em;
-  font-size: var(--medium-font-size);
-  z-index: var(--z-navbar);
-
-  background: var(--navbar-color);
-  box-shadow: var(--shadow);
-  transform: translateY(0);
-  transition: var(--standard-transition);
-}
-
-.content__navbar--fixed {
+.navbar__button {
   position: fixed;
-  margin: 0 auto;
-  top: 0;
-}
-
-.content__navbar--hide {
-  transform: translateY(-100px);
+  z-index: 1;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
   transition: var(--standard-transition);
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  right: 0;
 }
 
-.content__navbar--list {
-  list-style-type: none;
-  height: fit-content;
+.navbar__button {
+  background-color: var(--navbar-color);
+  z-index: 1001;
+  border-radius: 50%;
+  margin: 2em;
+  width: 5em;
+}
 
-	display: inline-flex;
-  gap: 6.25em;
-  color: inherit;
-  -webkit-font-smoothing: antialiased;
+.button__rotate.active {
+  transform: rotate(45deg);
+}
 
+.navbar__button--line {
+  fill: none;
+  transition: var(--standard-transition);
+  stroke: var(--white);
+  stroke-width: 5.5;
+  stroke-linecap: round;
+}
+.navbar__button .button__line--top {
+  stroke-dasharray: 40 139;
+}
+.navbar__button .button__line--bottom {
+  stroke-dasharray: 40 180;
+}
+.navbar__button.active .button__line--top {
+  stroke-dashoffset: -6.125em;
+}
+.navbar__button.active .button__line--bottom {
+  stroke-dashoffset: -8.625em;
+}
 
-  transform: translate(0%, 25%);
+.content__navbar--wrapper {
+  position: fixed;
+  z-index: 1000;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  background-color: var(--navbar-color);
+  transition: var(--standard-transition);
+  text-align: center;
+}
+
+.content__navbar--wrapper.active {
+  transform: translateX(0%);
 }
 
 .content__navbar--list a{
-  text-decoration: none;
-  color: var(--font-color);
+  font-size: var(--big-font-size);
+  color: var(--white);
+}
+
+.content__navbar--list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .navbar__list--item {
-  height: 100%;
-  overflow: hidden;
-}
-
-.content__navbar--list li {
-  padding: 1em 0;
-  text-transform: uppercase;
   position: relative;
+  margin: 4em 0;
 }
 
-.content__navbar--list ul li {
-  display: inline;
-}
-
-.content__navbar--list li::before {
-  content: '';
+.navbar__list--item::before {
+  content: "";
   position: absolute;
-  height: 0.2em;
-  width: 1em;
-  left: 0;
-  bottom: 0.8em;
-  background: var(--conic-gradient); 
+  background: var(--conic-gradient);
+  height: 3px;
+  bottom: 0;
+  width: 0%;
   transition: var(--standard-transition);
 }
 
-.content__navbar--list li:hover:before {
+.navbar__list--item:hover::before {
   width: 100%;
-} */
+}
 
 /*=============== SOCIAL LINKS ===============*/
 .content__social-links {
@@ -340,7 +358,7 @@ body::-webkit-scrollbar {
   top: 50%;
   translate: -50% -50%;
   border-radius: 50%;
-  background: linear-gradient(to right, #161616, #161616);
+  background: linear-gradient(to right, #151616, #151616);
   animation: blob__rotate 20s infinite;
   opacity: 0.8;
 }
@@ -645,13 +663,13 @@ section, header {
 }
 
 .card__content--image {
-  background-image: url(/img/donbon.png);
+  background-image: url(../img/donbon.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100%;
   border-top-left-radius: 0.25em;
   border-top-right-radius: 0.25em;
-  filter: contrast(90%);
+  filter: grayscale(40%) contrast(70%);
   overflow: hidden;
   position: relative;
   transition:all 0.5s ;
@@ -661,7 +679,7 @@ section, header {
 }
 
 .projects__card--item:hover .card__content--image {
-  filter: contrast(100%);
+  filter: grayscale(0%) contrast(110%);
 }
 
 .card__content--image::before {
@@ -756,6 +774,7 @@ section, header {
   justify-content: center;
   align-items: center;
   text-align: center;
+
 }
 
 
@@ -777,6 +796,7 @@ section, header {
   -moz-animation: Gradient 15s ease infinite;
   animation: Gradient 15s ease infinite;
   position: relative; 
+
 }
 
 .content__contact::after {

@@ -24,9 +24,6 @@
     strony mobilne
     ">
 
-    <!-- JQuery -->
-    <script src="scripts/vendor/jquery.min.js"></script>
-
     <!-- AwesomeFonts -->
     <script src="scripts/vendor/fontawesome.js"></script>
 
@@ -49,7 +46,7 @@
 </head>
 <body>
 
-<!-- <div class="page__loader">
+<div class="page__loader">
   <div class="page__loader--button"><span>Let me introduce myself.</span></div>
   <div class="page__loader--background">
       <div class="loader__circle">
@@ -57,11 +54,31 @@
           <div class="loader__circle--inner"></div>
       </div>
   </div>
-</div> -->
+</div>
 
-<nav class="content__navbar content__navbar--fixed">
-
+<nav class="content__navbar">
+  <div class="content__navbar--wrapper">
+    <ul class="content__navbar--list">
+      <li class="navbar__list--item"><a href="#about">ABOUT</a></li>
+      <li class="navbar__list--item"><a href="#projects">PROJECTS</a></li>
+      <li class="navbar__list--item"><a href="#skills">SKILLS</a></li>
+      <li class="navbar__list--item"><a href="#contact">CONTACT</a></li>
+    </ul>
+  </div>
 </nav>
+
+<svg class="navbar__button button__rotate" viewBox="0 0 100 100">
+  <path 
+        class="navbar__button--line button__line--top"
+        d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+  <path
+        class="navbar__button--line button__line--middle"
+        d="m 30,50 h 40" />
+  <path
+        class="navbar__button--line button__line--bottom"
+        d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+</svg>
+
 
 <div class="content__social-links content__social-links--hide">
   <ul>
