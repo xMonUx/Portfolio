@@ -1,3 +1,6 @@
+//=======================================//
+//==============* CUSTOM *==============//
+//=====================================//
 
 //=============================
 // Navbar || socials show/hide > 550px
@@ -53,9 +56,9 @@ navItems.forEach(item => {
 });
 
 
-// =============================
+//=============================
 // Refresh page scroll on top
-// =============================
+//=============================
 if (history.scrollRestoration) {
     history.scrollRestoration = 'manual';
 } else {
@@ -82,8 +85,13 @@ button.addEventListener("click", () => {
   body.style.overflow = "auto";
 
   setTimeout(() => {
-  pageLoader.style.display = "none";
-    }, 1000);
+    pageLoader.style.display = "none";
+  }, 1000);
+  
+  // Dodajemy instrukcję warunkową, która usuwa klasę 'disabled--scroll', jeśli 'body' ma klasę 'loaded'
+  if (body.classList.contains('loaded')) {
+    body.classList.remove('disabled--scroll');
+  }
 });
 
 setTimeout(() => {
@@ -94,11 +102,19 @@ setTimeout(() => {
     body.style.overflow = "auto";
 
     setTimeout(() => {
-        pageLoader.style.display = "none";
+      pageLoader.style.display = "none";
     }, 1000);
+    
+    // Dodajemy instrukcję warunkową, która dodaje klasę 'disabled--scroll', jeśli 'body' nie ma klasy 'loaded'
+    if (!body.classList.contains('loaded')) {
+      body.classList.add('disabled--scroll');
+    }
   }
 }, 2000);
 
+//=======================================//
+//=============* LIBRARIES *============//
+//=====================================//
 
 //=============================
 // Particles
@@ -278,9 +294,7 @@ function animate() {
   illo.updateRenderGraph();
   requestAnimationFrame( animate );
 }
-
 animate();
-
 
 //=============================
 // Waypoints
@@ -293,15 +307,3 @@ var waypoint = new Waypoint({
   }
 })
 
-/* -- Glow effect -- */
-
-const blob = document.getElementById("blob");
-
-window.onpointermove = event => { 
-  const { clientX, clientY } = event;
-  
-  blob.animate({
-    left: `${clientX}px`,
-    top: `${clientY}px`
-  }, { duration: 3000, fill: "forwards" });
-}

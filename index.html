@@ -23,7 +23,6 @@
     frontend,
     strony mobilne
     ">
-
     <!-- AwesomeFonts -->
     <script src="scripts/vendor/fontawesome.js"></script>
 
@@ -45,7 +44,6 @@
     
 </head>
 <body>
-
 <div class="page__loader">
   <div class="page__loader--button"><span>Let me introduce myself.</span></div>
   <div class="page__loader--background">
@@ -55,7 +53,6 @@
       </div>
   </div>
 </div>
-
 <nav class="content__navbar">
   <div class="content__navbar--wrapper">
     <ul class="content__navbar--list">
@@ -66,7 +63,6 @@
     </ul>
   </div>
 </nav>
-
 <svg class="navbar__button button__rotate" viewBox="0 0 100 100">
   <path 
         class="navbar__button--line button__line--top"
@@ -78,8 +74,6 @@
         class="navbar__button--line button__line--bottom"
         d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
 </svg>
-
-
 <div class="content__social-links content__social-links--hide">
   <ul>
     <li><a href="https://github.com/xMonUx" target="_blank"><i class="fab fa-github"></i></a></li>
@@ -88,13 +82,7 @@
     <li><a href="#" target="_blank"><i class="fab fa-whatsapp" ></i></a></li>
   </ul>
 </div>
-
-
 <main class="page__content">
-
-  <div id="blob"></div>
-
-
     <section class="content__hero">
       <div class="content__hero--wrapper">
         <div class="content__hero--content">
@@ -110,41 +98,34 @@
         </div>
       </div>
     </section>
-    
     <section class="content__about" id="about">
       <div class="content__about--title">
         <p>Hi! I'm Adrian, a frontend developer currently looking for a full-time job.</p> 
         <p>Most of my projects in my portfolio are things that i did for fun. </p>
         <p class="about__title--add">Or my friends asked me to.</p> 
-      </div>
-      <div class="content__about--list-wrapper">
         <span class="about__list-wrapper--title">So far, I have worked with:</span>
-        
-        <div class="content__about--list">
-          <ul class="about__list--item">
-            <li>JS/jquery</li>
-            <li>Bootstrap</li>
-            <li>Responsive Web Design</li>
-            <li>Node</li>
-            <li>React</li>
-          </ul>
-  
-          <ul class="about__list--item">
-            <li>Three.js</li>
-            <li>Particles.js</li>
-            <li>Modernizr.js</li>
-          </ul>
-  
-          <ul class="about__list--item">
-            <li>Figma</li>
-            <li>Canva</li>
-            <li>Adobe Photoshop</li>
-            <li>Adobe Ilustrator</li>
-          </ul>
-        </div>
-
       </div>
-      
+        <div class="content__about--list">
+          <div class="about__list--item">
+            <i class="fa-brands fa-square-js"></i><span>JavaScript</span>
+          </div>
+          <div class="about__list--item">
+            <i class="fa-brands fa-github"></i><span>GitHub</span>
+          </div>
+          <div class="about__list--item">
+            <i class="fa-brands fa-react"></i> <span>React</span>
+          </div>
+          <div class="about__list--item">
+            <i class="fa-brands fa-node-js"></i><span>Node</span>
+          </div>
+          <div class="about__list--item">
+            <i class="fa-brands fa-envira"></i><span>MongoDB</span>
+          </div>
+          <div class="about__list--item">
+            <i class="fa-brands fa-bootstrap"></i><span>Bootstrap</span>
+          </div>
+        </div>
+        <span class="about__list-wrapper--end">And more...</span>
     </section>
     <section class="content__projects" id="projects">
       <div class="content__projects--wrapper">
@@ -163,7 +144,7 @@
             <li>
               <div class="projects__card--item">
                 <div class="projects__card--content">
-                  <div class="card__content--image"></div>
+                  <div class="card__content--image donbon"></div>
                   <div class="card__content-bottom">
                     <div class="card__content-bottom--title">
                       DonBon
@@ -180,13 +161,30 @@
             <li>
               <div class="projects__card--item">
                 <div class="projects__card--content">
-                  <div class="card__content--image"></div>
+                  <div class="card__content--image magic"></div>
                   <div class="card__content-bottom">
                     <div class="card__content-bottom--title">
-                      DonBon
+                      The Battle App
                     </div>
                     <div class="card__content-bottom--desc">
-                      An application created for streamers that allows viewers to call actions on the creator's computer.
+                      An app that allows you to follow the gameplay of a card game in live mode. 
+                    </div>
+                    <div>
+                      <button class="card__content-bottom--button"><a href="https://github.com/xMonUx/mtg_hp_counter" target="_blank">GitHub</a></button>
+                    </div>
+                  </div>
+                </div>
+            </li>
+            <li>
+              <div class="projects__card--item">
+                <div class="projects__card--content">
+                  <div class="card__content--image portfolio"></div>
+                  <div class="card__content-bottom">
+                    <div class="card__content-bottom--title">
+                      Portfolio
+                    </div>
+                    <div class="card__content-bottom--desc">
+                      A simple website that conveys all the necessary information about my projects.
                     </div>
                     <div>
                       <button class="card__content-bottom--button"><a href="https://github.com/xMonUx/DonBon" target="_blank">GitHub</a></button>
@@ -197,30 +195,13 @@
             <li>
               <div class="projects__card--item">
                 <div class="projects__card--content">
-                  <div class="card__content--image"></div>
+                  <div class="card__content--image stream"></div>
                   <div class="card__content-bottom">
                     <div class="card__content-bottom--title">
-                      DonBon
+                      StreamInteractions
                     </div>
                     <div class="card__content-bottom--desc">
-                      An application created for streamers that allows viewers to call actions on the creator's computer.
-                    </div>
-                    <div>
-                      <button class="card__content-bottom--button"><a href="https://github.com/xMonUx/DonBon" target="_blank">GitHub</a></button>
-                    </div>
-                  </div>
-                </div>
-            </li>
-            <li>
-              <div class="projects__card--item">
-                <div class="projects__card--content">
-                  <div class="card__content--image"></div>
-                  <div class="card__content-bottom">
-                    <div class="card__content-bottom--title">
-                      DonBon
-                    </div>
-                    <div class="card__content-bottom--desc">
-                      An application created for streamers that allows viewers to call actions on the creator's computer.
+                      Chat bot for Twitch streamers. Still in progress.
                     </div>
                     <div>
                       <button class="card__content-bottom--button"><a href="https://github.com/xMonUx/DonBon" target="_blank">GitHub</a></button>
@@ -232,18 +213,6 @@
           </ul>
       </div>
   </section>
-
-  <section class="content__skills" id="skills">
-      <div class="content__skills--title">
-        Skills
-      </div>
-      <div class="content__skills--wrapper">
-        <ul class="content__skills--circles">
-
-        </ul>
-      </div>
-  </section>
-
   <section class="content__contact" id="contact">
     <div class="content__contact--title">
       Let's stay in touch!
@@ -267,14 +236,12 @@
       </div>
     </div>
   </section>
-
   <footer class="page__footer">
     <canvas class="zdog-canvas" width="340"></canvas>
     <div class="page__footer--bottom">
         <a class="footer__bottom--text">Adrian Jaros © 2023 All rights reserved.</a>
     </div>
   </footer>
-
 </main>
 
     <!-- MAIN JS -->
